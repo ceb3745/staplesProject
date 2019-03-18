@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f1fbff6-1f34-4917-9887-2381910d856d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/AbcsV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../db_demo/src/H2DemoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../db_demo/src/objects/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_603/Quizzes/week8.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_603/Written/ExamOne/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_603/Written/ExamOne/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_603/ps_grades.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_603/ps_grades.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Abcs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/ExceptionExampleV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/ExceptionExampleV1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/ExceptionExampleV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/ExceptionExampleV2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/out/production/code/Threads_PrinciplesV2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/Abcs.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/AbcsV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/ExceptionExampleV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/ExceptionExampleV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/ExceptionExampleV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/ExceptionExampleV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/Threads_PrinciplesV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/Threads_PrinciplesV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/Threads_PrinciplesV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/code/src/Threads_PrinciplesV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/cover_page.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/cover_page.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_sol.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v1_stu.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_sol.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/exam_v2_stu.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/exceptions_fileio.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/generics.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/generics.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/generics.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/generics.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/threads_basics.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/threads_basics.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/threads_wait_notify.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../2181/csci_605/exams/exam_two/questions/threads_wait_notify.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../quant/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../quant/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../quant/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../quant/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../quant/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../quant/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../quant/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../quant/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/bin/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/H2DemoMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-167">
+              <caret column="18" selection-start-column="18" selection-end-column="18" />
+              <folding>
+                <element signature="e#3608#3616#0" expanded="true" />
+                <element signature="e#3787#3795#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PersonTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1353">
+              <caret line="169" column="28" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/people.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/parse.py" />
+        <option value="$PROJECT_DIR$/people.csv" />
+        <option value="$PROJECT_DIR$/src/pdm/h2/demo/H2DemoMain.java" />
+        <option value="$PROJECT_DIR$/src/H2DemoMain.java" />
+        <option value="$PROJECT_DIR$/src/PersonTable.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1006" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548681687124" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.H2DemoMain">
+    <configuration name="H2DemoMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="H2DemoMain" />
+      <module name="H2Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="parse" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="H2Demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.H2DemoMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f1fbff6-1f34-4917-9887-2381910d856d" name="Default Changelist" comment="" />
+      <created>1548678036506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548678036506</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1920" height="1006" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14483494" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32996634" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/parse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/people.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.sql/java/sql/ResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="148" column="17" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/H2DemoMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167">
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#3608#3616#0" expanded="true" />
+            <element signature="e#3787#3795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PersonTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1353">
+          <caret line="169" column="28" selection-start-line="169" selection-start-column="28" selection-end-line="169" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>H2Demo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -440,3 +440,1217 @@ CREATE TABLE vendor(
   ,Vendor_ID    INTEGER  NOT NULL PRIMARY KEY 
   ,Phone_number VARCHAR(14) NOT NULL
 ) [42101-197]
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "51397497810" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (51397497810,'HP LaserJet Pro M281fdw All in One Wireless Color Laser Printer','hp','The HP LaserJet Pro M281fdw All in One Wireless Color Laser printer delivers ultra fast two-sided printing – including the fastest in-class First Page Out Time (FPOT). Extraordinary color, print speed performance and secure printing connectivity meet the',71,3,429.99,429.99,5) -- (51397497810, 'HP LaserJet Pro M281fdw All in One Wireless Color Laser Printer', 'hp', STRINGDECODE('The HP LaserJet Pro M281fdw All in One Wireless Color Laser printer delivers ultra fast two-sided printing \u2013 including the fastest in-class First Page Out Time (FPOT). Extraordinary color, print speed performance and secure printing connectivity meet the'), 71, 3, 429.99, 429.99, 5) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "88918299357" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88918299357,'Glad Tall Kitchen Drawstring Trash Bags 13 Gallon, 100 Bags/Box, White','GLAD','Sturdy garbage bags with 3-ply drawstring closure',71,7,15.99,15.99,200) -- (88918299357, 'Glad Tall Kitchen Drawstring Trash Bags 13 Gallon, 100 Bags/Box, White', 'GLAD', 'Sturdy garbage bags with 3-ply drawstring closure', 71, 7, 15.99, 15.99, 200) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "12890622851" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (12890622851,'Lysol Professional Cleaner Disinfectant, Clean, 19 Oz','Lysol','Spray cleaner removes dirt from a variety of surfaces: toilet and waiting rooms',71,7,6.99,6.99,200) -- (12890622851, 'Lysol Professional Cleaner Disinfectant, Clean, 19 Oz', 'Lysol', 'Spray cleaner removes dirt from a variety of surfaces: toilet and waiting rooms', 71, 7, 6.99, 6.99, 200) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "17281706684" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (17281706684,'Scott 1-Ply Standard Toilet Paper, White, 1000 Sheets/Roll, 27 Rolls/Carton','Scott','Contains 1000 1-ply sheets per roll for long-lasting use',71,7,20.59,25,50) -- (17281706684, 'Scott 1-Ply Standard Toilet Paper, White, 1000 Sheets/Roll, 27 Rolls/Carton', 'Scott', 'Contains 1000 1-ply sheets per roll for long-lasting use', 71, 7, 20.59, 25, 50) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "47362204194" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (47362204194,'Brita Replacement Filters','Brita','Replacement filters reduce many of the undesired extras that come out of your tap',71,6,26.09,26.09,40) -- (47362204194, 'Brita Replacement Filters', 'Brita', 'Replacement filters reduce many of the undesired extras that come out of your tap', 71, 6, 26.09, 26.09, 40) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "93255571190" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (93255571190,'HP OfficeJet Pro 8720 All-in-One InkJet Printer','hp','Maximize space with HP Print Forward Design and print professional-quality, low-cost color',797,3,179.99,299.99,5) -- (93255571190, 'HP OfficeJet Pro 8720 All-in-One InkJet Printer', 'hp', 'Maximize space with HP Print Forward Design and print professional-quality, low-cost color', 797, 3, 179.99, 299.99, 5) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "87911364417" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (87911364417,'Epson® WorkForce® EcoTank ET-4550 Wireless Multifunction Color Inkjet Printer','Epson','Comes with up to 2 years of ink in the box',797,3,562.99,562.99,30) -- (87911364417, STRINGDECODE('Epson\u00ae WorkForce\u00ae EcoTank ET-4550 Wireless Multifunction Color Inkjet Printer'), 'Epson', 'Comes with up to 2 years of ink in the box', 797, 3, 562.99, 562.99, 30) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "11441780584" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (11441780584,'Avery Easy Peel White Address Labels, Sure Feed Technology, Laser, Permanent, 1" x 2-5/8", 3,000 Labels','Avery','Address labels with Sure Feed technology are designed for a reliable feed through your printer helping prevent misalignments and jams',797,10,33.49,33.49,25) -- (11441780584, 'Avery Easy Peel White Address Labels, Sure Feed Technology, Laser, Permanent, 1" x 2-5/8", 3,000 Labels', 'Avery', 'Address labels with Sure Feed technology are designed for a reliable feed through your printer helping prevent misalignments and jams', 797, 10, 33.49, 33.49, 25) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "32249828298" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (32249828298,'BIC Round Stic Xtra Life Ballpoint Pens, Medium Point, Blue Ink, 60/Pack','Bic','Medium 1.0 mm ballpoint tip to let you fill out forms or take notes with ease',797,10,4.99,6.49,100) -- (32249828298, 'BIC Round Stic Xtra Life Ballpoint Pens, Medium Point, Blue Ink, 60/Pack', 'Bic', 'Medium 1.0 mm ballpoint tip to let you fill out forms or take notes with ease', 797, 10, 4.99, 6.49, 100) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "58240667914" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (58240667914,'Brother MFC-L2710DW Compact Monochrome Laser All-in-One Printer','Brother','4-in-1 Laser All-in-One Print, Copy, Scan and Fax',797,3,199.99,199.99,10) -- (58240667914, 'Brother MFC-L2710DW Compact Monochrome Laser All-in-One Printer', 'Brother', '4-in-1 Laser All-in-One Print, Copy, Scan and Fax', 797, 3, 199.99, 199.99, 10) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "21098600367" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (21098600367,'Logitech K350 Wireless Keyboard, Black (920-001996)','Logitech','Logitech keyboard is suitable for everyday home or office computing',797,2,59.99,59.99,6) -- (21098600367, 'Logitech K350 Wireless Keyboard, Black (920-001996)', 'Logitech', 'Logitech keyboard is suitable for everyday home or office computing', 797, 2, 59.99, 59.99, 6) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "71935875390" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (71935875390,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,399.99,399.99,3) -- (71935875390, 'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3', 'hp', 'Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.', 797, 10, 399.99, 399.99, 3) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "24063853433" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (24063853433,'Dell Inspiron 14 5482 14" Laptop Computer, Intel® Core™ i5-8265U, 256GB SSD, 8GB Memory, Intel UHD Graphics 620, Touch, 2-1','Dell','Versatile by design 14" 2-in-1 features plenty of versatility with four flexible modes and Dell Cinema in a sleek, sharp design.',797,10,529.99,799.99,2) -- (24063853433, STRINGDECODE('Dell Inspiron 14 5482 14\" Laptop Computer, Intel\u00ae Core\u2122 i5-8265U, 256GB SSD, 8GB Memory, Intel UHD Graphics 620, Touch, 2-1'), 'Dell', 'Versatile by design 14" 2-in-1 features plenty of versatility with four flexible modes and Dell Cinema in a sleek, sharp design.', 797, 10, 529.99, 799.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "25259296749" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (25259296749,'HP 14-ck0061st 4AG12UA#ABA 14" Notebook Laptop, Intel Pentium','hp','Get access to frequently used documents and programs wherever you are with this HP 14-inch laptop.',797,10,669.99,669.99,2) -- (25259296749, 'HP 14-ck0061st 4AG12UA#ABA 14" Notebook Laptop, Intel Pentium', 'hp', 'Get access to frequently used documents and programs wherever you are with this HP 14-inch laptop.', 797, 10, 669.99, 669.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "27925871640" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (27925871640,'HP Pavilion 14-ce0064st 4AL53UA#ABA 14" Notebook Laptop, Intel i5','hp','Get important jobs taken care of no matter where you happen to be with this HP Pavilion 14-inch laptop computer.',797,10,528.99,599.99,1) -- (27925871640, 'HP Pavilion 14-ce0064st 4AL53UA#ABA 14" Notebook Laptop, Intel i5', 'hp', 'Get important jobs taken care of no matter where you happen to be with this HP Pavilion 14-inch laptop computer.', 797, 10, 528.99, 599.99, 1) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "70205921167" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (70205921167,'HP Pavilion 15-cs0061st 4AL55UA#ABA 15.6" Notebook Laptop, Intel i7','hp','Collaborate effectively when working on a wide range of tasks with this HP Pavilion 15.6-inch laptop computer.',797,10,531.99,599.99,0) -- (70205921167, 'HP Pavilion 15-cs0061st 4AL55UA#ABA 15.6" Notebook Laptop, Intel i7', 'hp', 'Collaborate effectively when working on a wide range of tasks with this HP Pavilion 15.6-inch laptop computer.', 797, 10, 531.99, 599.99, 0) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "98294179450" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (98294179450,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,303.99,349.99,2) -- (98294179450, 'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3', 'hp', 'Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.', 797, 10, 303.99, 349.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "54567859431" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (54567859431,'HP 14-ck0065st 4AG13UA#ABA 14" Notebook Laptop, Intel i3','hp','Get projects done wherever you happen to be with this HP 14-inch laptop.',797,10,751.99,799.99,3) -- (54567859431, 'HP 14-ck0065st 4AG13UA#ABA 14" Notebook Laptop, Intel i3', 'hp', 'Get projects done wherever you happen to be with this HP 14-inch laptop.', 797, 10, 751.99, 799.99, 3) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "22767861014" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (22767861014,'Lenovo 330-15IKBR 81DE00LBUS 15.6" Notebook Laptop, Intel i5','Lenovo','Check your email, browse the internet, and work on a host of other important tasks with this Lenovo Ideapad 330 15.6-inch laptop computer.',797,10,787.99,799.99,1) -- (22767861014, 'Lenovo 330-15IKBR 81DE00LBUS 15.6" Notebook Laptop, Intel i5', 'Lenovo', 'Check your email, browse the internet, and work on a host of other important tasks with this Lenovo Ideapad 330 15.6-inch laptop computer.', 797, 10, 787.99, 799.99, 1) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "37392998752" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (37392998752,'Lenovo® ThinkPad T540P 15.6" Laptop, Intel Core i5-4300M 2.6GHz, 8GB, 256GB SSD, DVD, Win 10 Pro 64bit, Refurbished','Lenovo','When it comes to your family’s needs, the Refurbished Lenovo T540P has got everyone covered. Built with power and speed to tackle those to do lists Lenovo T540P is a state of the art computer that offers top quality components to assure quality while performing both personal and business applications',797,10,615.99,699.99,0) -- (37392998752, STRINGDECODE('Lenovo\u00ae ThinkPad T540P 15.6\" Laptop, Intel Core i5-4300M 2.6GHz, 8GB, 256GB SSD, DVD, Win 10 Pro 64bit, Refurbished'), 'Lenovo', STRINGDECODE('When it comes to your family\u2019s needs, the Refurbished Lenovo T540P has got everyone covered. Built with power and speed to tackle those to do lists Lenovo T540P is a state of the art computer that offers top quality components to assure quality while performing both personal and business applications'), 797, 10, 615.99, 699.99, 0) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "42528253672" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (42528253672,'Lenovo Laptop, X1 Carbon Core i5-3427U 1.8GHz, 4GB Ram, 128SSD, NO_ODD, 14, Windows 10 Professional 64bit, CAM, Refurbished','Lenovo','Premium, performance, and productivity everywhere in a PC that is both sylish and entertaining.',797,10,799.99,799.99,2) -- (42528253672, 'Lenovo Laptop, X1 Carbon Core i5-3427U 1.8GHz, 4GB Ram, 128SSD, NO_ODD, 14, Windows 10 Professional 64bit, CAM, Refurbished', 'Lenovo', 'Premium, performance, and productivity everywhere in a PC that is both sylish and entertaining.', 797, 10, 799.99, 799.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "36250247646" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (36250247646,'Acer Aspire 3 A315-41-R3RF 15.6" Notebook Laptop, AMD Ryzen 3','Acer','Meet important deadlines away from the office by completing projects on this 15.6-inch Acer Aspire 3 laptop.',797,10,299.99,299.99,4) -- (36250247646, 'Acer Aspire 3 A315-41-R3RF 15.6" Notebook Laptop, AMD Ryzen 3', 'Acer', 'Meet important deadlines away from the office by completing projects on this 15.6-inch Acer Aspire 3 laptop.', 797, 10, 299.99, 299.99, 4) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "40736633585" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (40736633585,'Dell Inspiron Desktop Computer 8th Gen i5+8400, 1TB with 16GB Optane, 8GB ddr4,Win 10,Intel® UHD Graphics 630','Dell','The Dell™ Inspiron Desktop 3670 in black, runs on Intel i5+8400 up to 4.0 GHZ GHz processor with 9MB cache memory for efficient multi-tasking. Featuring 8GB DDR4 (2666 mhz) and 16GB Optane Memory with a 1TB sata 7200 RPM hard drive.',797,10,699.99,699.99,3) -- (40736633585, STRINGDECODE('Dell Inspiron Desktop Computer 8th Gen i5+8400, 1TB with 16GB Optane, 8GB ddr4,Win 10,Intel\u00ae UHD Graphics 630'), 'Dell', STRINGDECODE('The Dell\u2122 Inspiron Desktop 3670 in black, runs on Intel i5+8400 up to 4.0 GHZ GHz processor with 9MB cache memory for efficient multi-tasking. Featuring 8GB DDR4 (2666 mhz) and 16GB Optane Memory with a 1TB sata 7200 RPM hard drive.'), 797, 10, 699.99, 699.99, 3) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "33892834858" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (33892834858,'Dell Desktop Computer 790 Optiplex Intel Core I5,16GB, 2TB HDD, Windows 10 Pro, Dual 19" LCD, Keyboard, Mouse, Wifi, Refurbished','Dell','The game-changing Dell Optiplex 790 offers the performance and reliability you need on a budget you can afford.',797,10,349.99,399.99,2) -- (33892834858, 'Dell Desktop Computer 790 Optiplex Intel Core I5,16GB, 2TB HDD, Windows 10 Pro, Dual 19" LCD, Keyboard, Mouse, Wifi, Refurbished', 'Dell', 'The game-changing Dell Optiplex 790 offers the performance and reliability you need on a budget you can afford.', 797, 10, 349.99, 399.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:19:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "88260551307" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88260551307,'HP 22-c0016 3LA83AA#ABA All-in-One Desktop Computer, Intel Pentium','hp','Complete challenging projects in record time with this HP 21.5-inch all-in-one desktop PC.',797,10,349.99,449.99,1) -- (88260551307, 'HP 22-c0016 3LA83AA#ABA All-in-One Desktop Computer, Intel Pentium', 'hp', 'Complete challenging projects in record time with this HP 21.5-inch all-in-one desktop PC.', 797, 10, 349.99, 449.99, 1) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PRODUCT" already exists; SQL statement:
+CREATE TABLE Product(
+   UPC         VARCHAR(20) NOT NULL PRIMARY KEY 
+  ,Name        VARCHAR(128) NOT NULL
+  ,Brand_ID    VARCHAR(8) NOT NULL
+  ,Details     VARCHAR(301) NOT NULL
+  ,Store_ID    INTEGER  NOT NULL
+  ,SD_ID       INTEGER  NOT NULL
+  ,Price       NUMERIC(6,2) NOT NULL
+  ,MSRP        NUMERIC(6,2) NOT NULL
+  ,Quantity    INTEGER  NOT NULL,
+foreign key(Brand_ID) references Brand, foreign key(Store_ID) references Store, foreign key(SD_ID) references Sub_Department
+) [42101-197]
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "51397497810" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (51397497810,'HP LaserJet Pro M281fdw All in One Wireless Color Laser Printer','hp','The HP LaserJet Pro M281fdw All in One Wireless Color Laser printer delivers ultra fast two-sided printing – including the fastest in-class First Page Out Time (FPOT). Extraordinary color, print speed performance and secure printing connectivity meet the',71,3,429.99,429.99,5) -- (51397497810, 'HP LaserJet Pro M281fdw All in One Wireless Color Laser Printer', 'hp', STRINGDECODE('The HP LaserJet Pro M281fdw All in One Wireless Color Laser printer delivers ultra fast two-sided printing \u2013 including the fastest in-class First Page Out Time (FPOT). Extraordinary color, print speed performance and secure printing connectivity meet the'), 71, 3, 429.99, 429.99, 5) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "88918299357" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88918299357,'Glad Tall Kitchen Drawstring Trash Bags 13 Gallon, 100 Bags/Box, White','GLAD','Sturdy garbage bags with 3-ply drawstring closure',71,7,15.99,15.99,200) -- (88918299357, 'Glad Tall Kitchen Drawstring Trash Bags 13 Gallon, 100 Bags/Box, White', 'GLAD', 'Sturdy garbage bags with 3-ply drawstring closure', 71, 7, 15.99, 15.99, 200) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "12890622851" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (12890622851,'Lysol Professional Cleaner Disinfectant, Clean, 19 Oz','Lysol','Spray cleaner removes dirt from a variety of surfaces: toilet and waiting rooms',71,7,6.99,6.99,200) -- (12890622851, 'Lysol Professional Cleaner Disinfectant, Clean, 19 Oz', 'Lysol', 'Spray cleaner removes dirt from a variety of surfaces: toilet and waiting rooms', 71, 7, 6.99, 6.99, 200) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "17281706684" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (17281706684,'Scott 1-Ply Standard Toilet Paper, White, 1000 Sheets/Roll, 27 Rolls/Carton','Scott','Contains 1000 1-ply sheets per roll for long-lasting use',71,7,20.59,25,50) -- (17281706684, 'Scott 1-Ply Standard Toilet Paper, White, 1000 Sheets/Roll, 27 Rolls/Carton', 'Scott', 'Contains 1000 1-ply sheets per roll for long-lasting use', 71, 7, 20.59, 25, 50) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "47362204194" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (47362204194,'Brita Replacement Filters','Brita','Replacement filters reduce many of the undesired extras that come out of your tap',71,6,26.09,26.09,40) -- (47362204194, 'Brita Replacement Filters', 'Brita', 'Replacement filters reduce many of the undesired extras that come out of your tap', 71, 6, 26.09, 26.09, 40) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "93255571190" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (93255571190,'HP OfficeJet Pro 8720 All-in-One InkJet Printer','hp','Maximize space with HP Print Forward Design and print professional-quality, low-cost color',797,3,179.99,299.99,5) -- (93255571190, 'HP OfficeJet Pro 8720 All-in-One InkJet Printer', 'hp', 'Maximize space with HP Print Forward Design and print professional-quality, low-cost color', 797, 3, 179.99, 299.99, 5) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "87911364417" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (87911364417,'Epson® WorkForce® EcoTank ET-4550 Wireless Multifunction Color Inkjet Printer','Epson','Comes with up to 2 years of ink in the box',797,3,562.99,562.99,30) -- (87911364417, STRINGDECODE('Epson\u00ae WorkForce\u00ae EcoTank ET-4550 Wireless Multifunction Color Inkjet Printer'), 'Epson', 'Comes with up to 2 years of ink in the box', 797, 3, 562.99, 562.99, 30) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "11441780584" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (11441780584,'Avery Easy Peel White Address Labels, Sure Feed Technology, Laser, Permanent, 1" x 2-5/8", 3,000 Labels','Avery','Address labels with Sure Feed technology are designed for a reliable feed through your printer helping prevent misalignments and jams',797,10,33.49,33.49,25) -- (11441780584, 'Avery Easy Peel White Address Labels, Sure Feed Technology, Laser, Permanent, 1" x 2-5/8", 3,000 Labels', 'Avery', 'Address labels with Sure Feed technology are designed for a reliable feed through your printer helping prevent misalignments and jams', 797, 10, 33.49, 33.49, 25) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "32249828298" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (32249828298,'BIC Round Stic Xtra Life Ballpoint Pens, Medium Point, Blue Ink, 60/Pack','Bic','Medium 1.0 mm ballpoint tip to let you fill out forms or take notes with ease',797,10,4.99,6.49,100) -- (32249828298, 'BIC Round Stic Xtra Life Ballpoint Pens, Medium Point, Blue Ink, 60/Pack', 'Bic', 'Medium 1.0 mm ballpoint tip to let you fill out forms or take notes with ease', 797, 10, 4.99, 6.49, 100) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "58240667914" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (58240667914,'Brother MFC-L2710DW Compact Monochrome Laser All-in-One Printer','Brother','4-in-1 Laser All-in-One Print, Copy, Scan and Fax',797,3,199.99,199.99,10) -- (58240667914, 'Brother MFC-L2710DW Compact Monochrome Laser All-in-One Printer', 'Brother', '4-in-1 Laser All-in-One Print, Copy, Scan and Fax', 797, 3, 199.99, 199.99, 10) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "21098600367" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (21098600367,'Logitech K350 Wireless Keyboard, Black (920-001996)','Logitech','Logitech keyboard is suitable for everyday home or office computing',797,2,59.99,59.99,6) -- (21098600367, 'Logitech K350 Wireless Keyboard, Black (920-001996)', 'Logitech', 'Logitech keyboard is suitable for everyday home or office computing', 797, 2, 59.99, 59.99, 6) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "71935875390" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (71935875390,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,399.99,399.99,3) -- (71935875390, 'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3', 'hp', 'Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.', 797, 10, 399.99, 399.99, 3) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "24063853433" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (24063853433,'Dell Inspiron 14 5482 14" Laptop Computer, Intel® Core™ i5-8265U, 256GB SSD, 8GB Memory, Intel UHD Graphics 620, Touch, 2-1','Dell','Versatile by design 14" 2-in-1 features plenty of versatility with four flexible modes and Dell Cinema in a sleek, sharp design.',797,10,529.99,799.99,2) -- (24063853433, STRINGDECODE('Dell Inspiron 14 5482 14\" Laptop Computer, Intel\u00ae Core\u2122 i5-8265U, 256GB SSD, 8GB Memory, Intel UHD Graphics 620, Touch, 2-1'), 'Dell', 'Versatile by design 14" 2-in-1 features plenty of versatility with four flexible modes and Dell Cinema in a sleek, sharp design.', 797, 10, 529.99, 799.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "25259296749" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (25259296749,'HP 14-ck0061st 4AG12UA#ABA 14" Notebook Laptop, Intel Pentium','hp','Get access to frequently used documents and programs wherever you are with this HP 14-inch laptop.',797,10,669.99,669.99,2) -- (25259296749, 'HP 14-ck0061st 4AG12UA#ABA 14" Notebook Laptop, Intel Pentium', 'hp', 'Get access to frequently used documents and programs wherever you are with this HP 14-inch laptop.', 797, 10, 669.99, 669.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "27925871640" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (27925871640,'HP Pavilion 14-ce0064st 4AL53UA#ABA 14" Notebook Laptop, Intel i5','hp','Get important jobs taken care of no matter where you happen to be with this HP Pavilion 14-inch laptop computer.',797,10,528.99,599.99,1) -- (27925871640, 'HP Pavilion 14-ce0064st 4AL53UA#ABA 14" Notebook Laptop, Intel i5', 'hp', 'Get important jobs taken care of no matter where you happen to be with this HP Pavilion 14-inch laptop computer.', 797, 10, 528.99, 599.99, 1) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "70205921167" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (70205921167,'HP Pavilion 15-cs0061st 4AL55UA#ABA 15.6" Notebook Laptop, Intel i7','hp','Collaborate effectively when working on a wide range of tasks with this HP Pavilion 15.6-inch laptop computer.',797,10,531.99,599.99,0) -- (70205921167, 'HP Pavilion 15-cs0061st 4AL55UA#ABA 15.6" Notebook Laptop, Intel i7', 'hp', 'Collaborate effectively when working on a wide range of tasks with this HP Pavilion 15.6-inch laptop computer.', 797, 10, 531.99, 599.99, 0) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "98294179450" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (98294179450,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,303.99,349.99,2) -- (98294179450, 'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3', 'hp', 'Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.', 797, 10, 303.99, 349.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "54567859431" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (54567859431,'HP 14-ck0065st 4AG13UA#ABA 14" Notebook Laptop, Intel i3','hp','Get projects done wherever you happen to be with this HP 14-inch laptop.',797,10,751.99,799.99,3) -- (54567859431, 'HP 14-ck0065st 4AG13UA#ABA 14" Notebook Laptop, Intel i3', 'hp', 'Get projects done wherever you happen to be with this HP 14-inch laptop.', 797, 10, 751.99, 799.99, 3) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "22767861014" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (22767861014,'Lenovo 330-15IKBR 81DE00LBUS 15.6" Notebook Laptop, Intel i5','Lenovo','Check your email, browse the internet, and work on a host of other important tasks with this Lenovo Ideapad 330 15.6-inch laptop computer.',797,10,787.99,799.99,1) -- (22767861014, 'Lenovo 330-15IKBR 81DE00LBUS 15.6" Notebook Laptop, Intel i5', 'Lenovo', 'Check your email, browse the internet, and work on a host of other important tasks with this Lenovo Ideapad 330 15.6-inch laptop computer.', 797, 10, 787.99, 799.99, 1) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "37392998752" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (37392998752,'Lenovo® ThinkPad T540P 15.6" Laptop, Intel Core i5-4300M 2.6GHz, 8GB, 256GB SSD, DVD, Win 10 Pro 64bit, Refurbished','Lenovo','When it comes to your family’s needs, the Refurbished Lenovo T540P has got everyone covered. Built with power and speed to tackle those to do lists Lenovo T540P is a state of the art computer that offers top quality components to assure quality while performing both personal and business applications',797,10,615.99,699.99,0) -- (37392998752, STRINGDECODE('Lenovo\u00ae ThinkPad T540P 15.6\" Laptop, Intel Core i5-4300M 2.6GHz, 8GB, 256GB SSD, DVD, Win 10 Pro 64bit, Refurbished'), 'Lenovo', STRINGDECODE('When it comes to your family\u2019s needs, the Refurbished Lenovo T540P has got everyone covered. Built with power and speed to tackle those to do lists Lenovo T540P is a state of the art computer that offers top quality components to assure quality while performing both personal and business applications'), 797, 10, 615.99, 699.99, 0) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "42528253672" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (42528253672,'Lenovo Laptop, X1 Carbon Core i5-3427U 1.8GHz, 4GB Ram, 128SSD, NO_ODD, 14, Windows 10 Professional 64bit, CAM, Refurbished','Lenovo','Premium, performance, and productivity everywhere in a PC that is both sylish and entertaining.',797,10,799.99,799.99,2) -- (42528253672, 'Lenovo Laptop, X1 Carbon Core i5-3427U 1.8GHz, 4GB Ram, 128SSD, NO_ODD, 14, Windows 10 Professional 64bit, CAM, Refurbished', 'Lenovo', 'Premium, performance, and productivity everywhere in a PC that is both sylish and entertaining.', 797, 10, 799.99, 799.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "36250247646" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (36250247646,'Acer Aspire 3 A315-41-R3RF 15.6" Notebook Laptop, AMD Ryzen 3','Acer','Meet important deadlines away from the office by completing projects on this 15.6-inch Acer Aspire 3 laptop.',797,10,299.99,299.99,4) -- (36250247646, 'Acer Aspire 3 A315-41-R3RF 15.6" Notebook Laptop, AMD Ryzen 3', 'Acer', 'Meet important deadlines away from the office by completing projects on this 15.6-inch Acer Aspire 3 laptop.', 797, 10, 299.99, 299.99, 4) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "40736633585" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (40736633585,'Dell Inspiron Desktop Computer 8th Gen i5+8400, 1TB with 16GB Optane, 8GB ddr4,Win 10,Intel® UHD Graphics 630','Dell','The Dell™ Inspiron Desktop 3670 in black, runs on Intel i5+8400 up to 4.0 GHZ GHz processor with 9MB cache memory for efficient multi-tasking. Featuring 8GB DDR4 (2666 mhz) and 16GB Optane Memory with a 1TB sata 7200 RPM hard drive.',797,10,699.99,699.99,3) -- (40736633585, STRINGDECODE('Dell Inspiron Desktop Computer 8th Gen i5+8400, 1TB with 16GB Optane, 8GB ddr4,Win 10,Intel\u00ae UHD Graphics 630'), 'Dell', STRINGDECODE('The Dell\u2122 Inspiron Desktop 3670 in black, runs on Intel i5+8400 up to 4.0 GHZ GHz processor with 9MB cache memory for efficient multi-tasking. Featuring 8GB DDR4 (2666 mhz) and 16GB Optane Memory with a 1TB sata 7200 RPM hard drive.'), 797, 10, 699.99, 699.99, 3) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "33892834858" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (33892834858,'Dell Desktop Computer 790 Optiplex Intel Core I5,16GB, 2TB HDD, Windows 10 Pro, Dual 19" LCD, Keyboard, Mouse, Wifi, Refurbished','Dell','The game-changing Dell Optiplex 790 offers the performance and reliability you need on a budget you can afford.',797,10,349.99,399.99,2) -- (33892834858, 'Dell Desktop Computer 790 Optiplex Intel Core I5,16GB, 2TB HDD, Windows 10 Pro, Dual 19" LCD, Keyboard, Mouse, Wifi, Refurbished', 'Dell', 'The game-changing Dell Optiplex 790 offers the performance and reliability you need on a budget you can afford.', 797, 10, 349.99, 399.99, 2) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:20:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Numeric value out of range: "88260551307" in column "UPC"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88260551307,'HP 22-c0016 3LA83AA#ABA All-in-One Desktop Computer, Intel Pentium','hp','Complete challenging projects in record time with this HP 21.5-inch all-in-one desktop PC.',797,10,349.99,449.99,1) -- (88260551307, 'HP 22-c0016 3LA83AA#ABA All-in-One Desktop Computer, Intel Pentium', 'hp', 'Complete challenging projects in record time with this HP 21.5-inch all-in-one desktop PC.', 797, 10, 349.99, 449.99, 1) [22004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.value.Value.convertToInt(Value.java:1214)
+	at org.h2.value.Value.convertTo(Value.java:723)
+	at org.h2.table.Column.convert(Column.java:177)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:166)
+	at org.h2.command.dml.Insert.update(Insert.java:134)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (51397497810,'HP LaserJet Pro M281fdw All in One Wireless Color Laser Printer','hp','The HP LaserJet Pro M281fdw All in One Wireless Color Laser printer delivers ultra fast two-sided printing – including the fastest in-class First Page Out Time (FPOT). Extraordinary color, print speed performance and secure printing connectivity meet the',71,3,429.99,429.99,5) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'GLAD' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88918299357,'Glad Tall Kitchen Drawstring Trash Bags 13 Gallon, 100 Bags/Box, White','GLAD','Sturdy garbage bags with 3-ply drawstring closure',71,7,15.99,15.99,200) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lysol' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (12890622851,'Lysol Professional Cleaner Disinfectant, Clean, 19 Oz','Lysol','Spray cleaner removes dirt from a variety of surfaces: toilet and waiting rooms',71,7,6.99,6.99,200) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Scott' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (17281706684,'Scott 1-Ply Standard Toilet Paper, White, 1000 Sheets/Roll, 27 Rolls/Carton','Scott','Contains 1000 1-ply sheets per roll for long-lasting use',71,7,20.59,25,50) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Brita' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (47362204194,'Brita Replacement Filters','Brita','Replacement filters reduce many of the undesired extras that come out of your tap',71,6,26.09,26.09,40) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (93255571190,'HP OfficeJet Pro 8720 All-in-One InkJet Printer','hp','Maximize space with HP Print Forward Design and print professional-quality, low-cost color',797,3,179.99,299.99,5) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Epson' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (87911364417,'Epson® WorkForce® EcoTank ET-4550 Wireless Multifunction Color Inkjet Printer','Epson','Comes with up to 2 years of ink in the box',797,3,562.99,562.99,30) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Avery' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (11441780584,'Avery Easy Peel White Address Labels, Sure Feed Technology, Laser, Permanent, 1" x 2-5/8", 3,000 Labels','Avery','Address labels with Sure Feed technology are designed for a reliable feed through your printer helping prevent misalignments and jams',797,10,33.49,33.49,25) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Bic' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (32249828298,'BIC Round Stic Xtra Life Ballpoint Pens, Medium Point, Blue Ink, 60/Pack','Bic','Medium 1.0 mm ballpoint tip to let you fill out forms or take notes with ease',797,10,4.99,6.49,100) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Brother' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (58240667914,'Brother MFC-L2710DW Compact Monochrome Laser All-in-One Printer','Brother','4-in-1 Laser All-in-One Print, Copy, Scan and Fax',797,3,199.99,199.99,10) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Logitech' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (21098600367,'Logitech K350 Wireless Keyboard, Black (920-001996)','Logitech','Logitech keyboard is suitable for everyday home or office computing',797,2,59.99,59.99,6) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (71935875390,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,399.99,399.99,3) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Dell' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (24063853433,'Dell Inspiron 14 5482 14" Laptop Computer, Intel® Core™ i5-8265U, 256GB SSD, 8GB Memory, Intel UHD Graphics 620, Touch, 2-1','Dell','Versatile by design 14" 2-in-1 features plenty of versatility with four flexible modes and Dell Cinema in a sleek, sharp design.',797,10,529.99,799.99,2) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (25259296749,'HP 14-ck0061st 4AG12UA#ABA 14" Notebook Laptop, Intel Pentium','hp','Get access to frequently used documents and programs wherever you are with this HP 14-inch laptop.',797,10,669.99,669.99,2) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (27925871640,'HP Pavilion 14-ce0064st 4AL53UA#ABA 14" Notebook Laptop, Intel i5','hp','Get important jobs taken care of no matter where you happen to be with this HP Pavilion 14-inch laptop computer.',797,10,528.99,599.99,1) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (70205921167,'HP Pavilion 15-cs0061st 4AL55UA#ABA 15.6" Notebook Laptop, Intel i7','hp','Collaborate effectively when working on a wide range of tasks with this HP Pavilion 15.6-inch laptop computer.',797,10,531.99,599.99,0) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (98294179450,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,303.99,349.99,2) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (54567859431,'HP 14-ck0065st 4AG13UA#ABA 14" Notebook Laptop, Intel i3','hp','Get projects done wherever you happen to be with this HP 14-inch laptop.',797,10,751.99,799.99,3) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lenovo' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (22767861014,'Lenovo 330-15IKBR 81DE00LBUS 15.6" Notebook Laptop, Intel i5','Lenovo','Check your email, browse the internet, and work on a host of other important tasks with this Lenovo Ideapad 330 15.6-inch laptop computer.',797,10,787.99,799.99,1) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lenovo' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (37392998752,'Lenovo® ThinkPad T540P 15.6" Laptop, Intel Core i5-4300M 2.6GHz, 8GB, 256GB SSD, DVD, Win 10 Pro 64bit, Refurbished','Lenovo','When it comes to your family’s needs, the Refurbished Lenovo T540P has got everyone covered. Built with power and speed to tackle those to do lists Lenovo T540P is a state of the art computer that offers top quality components to assure quality while performing both personal and business applications',797,10,615.99,699.99,0) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lenovo' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (42528253672,'Lenovo Laptop, X1 Carbon Core i5-3427U 1.8GHz, 4GB Ram, 128SSD, NO_ODD, 14, Windows 10 Professional 64bit, CAM, Refurbished','Lenovo','Premium, performance, and productivity everywhere in a PC that is both sylish and entertaining.',797,10,799.99,799.99,2) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Acer' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (36250247646,'Acer Aspire 3 A315-41-R3RF 15.6" Notebook Laptop, AMD Ryzen 3','Acer','Meet important deadlines away from the office by completing projects on this 15.6-inch Acer Aspire 3 laptop.',797,10,299.99,299.99,4) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Dell' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (40736633585,'Dell Inspiron Desktop Computer 8th Gen i5+8400, 1TB with 16GB Optane, 8GB ddr4,Win 10,Intel® UHD Graphics 630','Dell','The Dell™ Inspiron Desktop 3670 in black, runs on Intel i5+8400 up to 4.0 GHZ GHz processor with 9MB cache memory for efficient multi-tasking. Featuring 8GB DDR4 (2666 mhz) and 16GB Optane Memory with a 1TB sata 7200 RPM hard drive.',797,10,699.99,699.99,3) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Dell' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (33892834858,'Dell Desktop Computer 790 Optiplex Intel Core I5,16GB, 2TB HDD, Windows 10 Pro, Dual 19" LCD, Keyboard, Mouse, Wifi, Refurbished','Dell','The game-changing Dell Optiplex 790 offers the performance and reliability you need on a budget you can afford.',797,10,349.99,399.99,2) [22018-197]
+2019-03-18 19:21:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88260551307,'HP 22-c0016 3LA83AA#ABA All-in-One Desktop Computer, Intel Pentium','hp','Complete challenging projects in record time with this HP 21.5-inch all-in-one desktop PC.',797,10,349.99,449.99,1) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (51397497810,'HP LaserJet Pro M281fdw All in One Wireless Color Laser Printer','hp','The HP LaserJet Pro M281fdw All in One Wireless Color Laser printer delivers ultra fast two-sided printing – including the fastest in-class First Page Out Time (FPOT). Extraordinary color, print speed performance and secure printing connectivity meet the',71,3,429.99,429.99,5) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'GLAD' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88918299357,'Glad Tall Kitchen Drawstring Trash Bags 13 Gallon, 100 Bags/Box, White','GLAD','Sturdy garbage bags with 3-ply drawstring closure',71,7,15.99,15.99,200) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lysol' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (12890622851,'Lysol Professional Cleaner Disinfectant, Clean, 19 Oz','Lysol','Spray cleaner removes dirt from a variety of surfaces: toilet and waiting rooms',71,7,6.99,6.99,200) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Scott' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (17281706684,'Scott 1-Ply Standard Toilet Paper, White, 1000 Sheets/Roll, 27 Rolls/Carton','Scott','Contains 1000 1-ply sheets per roll for long-lasting use',71,7,20.59,25,50) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Brita' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (47362204194,'Brita Replacement Filters','Brita','Replacement filters reduce many of the undesired extras that come out of your tap',71,6,26.09,26.09,40) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (93255571190,'HP OfficeJet Pro 8720 All-in-One InkJet Printer','hp','Maximize space with HP Print Forward Design and print professional-quality, low-cost color',797,3,179.99,299.99,5) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Epson' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (87911364417,'Epson® WorkForce® EcoTank ET-4550 Wireless Multifunction Color Inkjet Printer','Epson','Comes with up to 2 years of ink in the box',797,3,562.99,562.99,30) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Avery' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (11441780584,'Avery Easy Peel White Address Labels, Sure Feed Technology, Laser, Permanent, 1" x 2-5/8", 3,000 Labels','Avery','Address labels with Sure Feed technology are designed for a reliable feed through your printer helping prevent misalignments and jams',797,10,33.49,33.49,25) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Bic' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (32249828298,'BIC Round Stic Xtra Life Ballpoint Pens, Medium Point, Blue Ink, 60/Pack','Bic','Medium 1.0 mm ballpoint tip to let you fill out forms or take notes with ease',797,10,4.99,6.49,100) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Brother' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (58240667914,'Brother MFC-L2710DW Compact Monochrome Laser All-in-One Printer','Brother','4-in-1 Laser All-in-One Print, Copy, Scan and Fax',797,3,199.99,199.99,10) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Logitech' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (21098600367,'Logitech K350 Wireless Keyboard, Black (920-001996)','Logitech','Logitech keyboard is suitable for everyday home or office computing',797,2,59.99,59.99,6) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (71935875390,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,399.99,399.99,3) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Dell' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (24063853433,'Dell Inspiron 14 5482 14" Laptop Computer, Intel® Core™ i5-8265U, 256GB SSD, 8GB Memory, Intel UHD Graphics 620, Touch, 2-1','Dell','Versatile by design 14" 2-in-1 features plenty of versatility with four flexible modes and Dell Cinema in a sleek, sharp design.',797,10,529.99,799.99,2) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (25259296749,'HP 14-ck0061st 4AG12UA#ABA 14" Notebook Laptop, Intel Pentium','hp','Get access to frequently used documents and programs wherever you are with this HP 14-inch laptop.',797,10,669.99,669.99,2) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (27925871640,'HP Pavilion 14-ce0064st 4AL53UA#ABA 14" Notebook Laptop, Intel i5','hp','Get important jobs taken care of no matter where you happen to be with this HP Pavilion 14-inch laptop computer.',797,10,528.99,599.99,1) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (70205921167,'HP Pavilion 15-cs0061st 4AL55UA#ABA 15.6" Notebook Laptop, Intel i7','hp','Collaborate effectively when working on a wide range of tasks with this HP Pavilion 15.6-inch laptop computer.',797,10,531.99,599.99,0) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (98294179450,'HP 17-by0061st 4AG14UA#ABA 17.3" Notebook Laptop, Intel i3','hp','Access the internet, watch movies, and complete projects with this HP 17.3-inch laptop computer.',797,10,303.99,349.99,2) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (54567859431,'HP 14-ck0065st 4AG13UA#ABA 14" Notebook Laptop, Intel i3','hp','Get projects done wherever you happen to be with this HP 14-inch laptop.',797,10,751.99,799.99,3) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lenovo' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (22767861014,'Lenovo 330-15IKBR 81DE00LBUS 15.6" Notebook Laptop, Intel i5','Lenovo','Check your email, browse the internet, and work on a host of other important tasks with this Lenovo Ideapad 330 15.6-inch laptop computer.',797,10,787.99,799.99,1) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lenovo' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (37392998752,'Lenovo® ThinkPad T540P 15.6" Laptop, Intel Core i5-4300M 2.6GHz, 8GB, 256GB SSD, DVD, Win 10 Pro 64bit, Refurbished','Lenovo','When it comes to your family’s needs, the Refurbished Lenovo T540P has got everyone covered. Built with power and speed to tackle those to do lists Lenovo T540P is a state of the art computer that offers top quality components to assure quality while performing both personal and business applications',797,10,615.99,699.99,0) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Lenovo' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (42528253672,'Lenovo Laptop, X1 Carbon Core i5-3427U 1.8GHz, 4GB Ram, 128SSD, NO_ODD, 14, Windows 10 Professional 64bit, CAM, Refurbished','Lenovo','Premium, performance, and productivity everywhere in a PC that is both sylish and entertaining.',797,10,799.99,799.99,2) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Acer' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (36250247646,'Acer Aspire 3 A315-41-R3RF 15.6" Notebook Laptop, AMD Ryzen 3','Acer','Meet important deadlines away from the office by completing projects on this 15.6-inch Acer Aspire 3 laptop.',797,10,299.99,299.99,4) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Dell' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (40736633585,'Dell Inspiron Desktop Computer 8th Gen i5+8400, 1TB with 16GB Optane, 8GB ddr4,Win 10,Intel® UHD Graphics 630','Dell','The Dell™ Inspiron Desktop 3670 in black, runs on Intel i5+8400 up to 4.0 GHZ GHz processor with 9MB cache memory for efficient multi-tasking. Featuring 8GB DDR4 (2666 mhz) and 16GB Optane Memory with a 1TB sata 7200 RPM hard drive.',797,10,699.99,699.99,3) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'Dell' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (33892834858,'Dell Desktop Computer 790 Optiplex Intel Core I5,16GB, 2TB HDD, Windows 10 Pro, Dual 19" LCD, Keyboard, Mouse, Wifi, Refurbished','Dell','The game-changing Dell Optiplex 790 offers the performance and reliability you need on a budget you can afford.',797,10,349.99,399.99,2) [22018-197]
+2019-03-18 19:23:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'hp' (BRAND: BRAND_ID INTEGER NOT NULL)"; SQL statement:
+INSERT INTO Product(UPC,Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES (88260551307,'HP 22-c0016 3LA83AA#ABA All-in-One Desktop Computer, Intel Pentium','hp','Complete challenging projects in record time with this HP 21.5-inch all-in-one desktop PC.',797,10,349.99,449.99,1) [22018-197]

@@ -1,0 +1,435 @@
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (71,'110 Jefferson Road','Rochester','NY',14623,'585-424-1901',0) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (797,'1370 West Ridge Road','Rochester','NY',14615,'585-865-8340',2) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1864,'1601 Old Penfield Road','Rochester','NY',14625,'585-248-5560',2) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1075,'7560 Commons Blvd','Victor','NY',14564,'585-425-8130',1) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (280,'2 Plaza Drive','Auburn','NY',13021,'315-258-9557',0) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (433,'1440 Central Ave','Albany','NY',12205,'518-435-9920',2) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1602,'24-41 31st Street','Astoria','NY',11102,'718-932-0315',1) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (106,'209-34 Northern Blvd','Bayside','NY',11361,'718-229-0138',2) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1703,'251-21 Jericho Turnpike','Bellerose','NY',11426,'718-831-1289',0) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1916,'2044 Montauk Highway','Bridgehampton','NY',11932,'631-537-1654',2) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "STORE_ID" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1667,'2040 White Plains Road','Bronx','NY',10462,'718-409-9260',2) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'585-424-1901' (12)"; SQL statement:
+INSERT INTO store VALUES (71,'110 Jefferson Road','Rochester','NY',14623,'585-424-1901',0) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'585-865-8340' (12)"; SQL statement:
+INSERT INTO store VALUES (797,'1370 West Ridge Road','Rochester','NY',14615,'585-865-8340',2) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "STREET_ADDRESS VARCHAR(20)": "'1601 Old Penfield Road' (22)"; SQL statement:
+INSERT INTO store VALUES (1864,'1601 Old Penfield Road','Rochester','NY',14625,'585-248-5560',2) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'585-425-8130' (12)"; SQL statement:
+INSERT INTO store VALUES (1075,'7560 Commons Blvd','Victor','NY',14564,'585-425-8130',1) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'315-258-9557' (12)"; SQL statement:
+INSERT INTO store VALUES (280,'2 Plaza Drive','Auburn','NY',13021,'315-258-9557',0) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'518-435-9920' (12)"; SQL statement:
+INSERT INTO store VALUES (433,'1440 Central Ave','Albany','NY',12205,'518-435-9920',2) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'718-932-0315' (12)"; SQL statement:
+INSERT INTO store VALUES (1602,'24-41 31st Street','Astoria','NY',11102,'718-932-0315',1) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'718-229-0138' (12)"; SQL statement:
+INSERT INTO store VALUES (106,'209-34 Northern Blvd','Bayside','NY',11361,'718-229-0138',2) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "STREET_ADDRESS VARCHAR(20)": "'251-21 Jericho Turnpike' (23)"; SQL statement:
+INSERT INTO store VALUES (1703,'251-21 Jericho Turnpike','Bellerose','NY',11426,'718-831-1289',0) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'631-537-1654' (12)"; SQL statement:
+INSERT INTO store VALUES (1916,'2044 Montauk Highway','Bridgehampton','NY',11932,'631-537-1654',2) [22001-197]
+2019-03-18 18:03:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "STREET_ADDRESS VARCHAR(20)": "'2040 White Plains Road' (22)"; SQL statement:
+INSERT INTO store VALUES (1667,'2040 White Plains Road','Bronx','NY',10462,'718-409-9260',2) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'5854241901' (10)"; SQL statement:
+INSERT INTO store VALUES (71,'110 Jefferson Road','Rochester','NY',14623,'5854241901',0) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'5858658340' (10)"; SQL statement:
+INSERT INTO store VALUES (797,'1370 West Ridge Road','Rochester','NY',14615,'5858658340',2) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "STREET_ADDRESS VARCHAR(20)": "'1601 Old Penfield Road' (22)"; SQL statement:
+INSERT INTO store VALUES (1864,'1601 Old Penfield Road','Rochester','NY',14625,'5852485560',2) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'5854258130' (10)"; SQL statement:
+INSERT INTO store VALUES (1075,'7560 Commons Blvd','Victor','NY',14564,'5854258130',1) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'3152589557' (10)"; SQL statement:
+INSERT INTO store VALUES (280,'2 Plaza Drive','Auburn','NY',13021,'3152589557',0) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'5184359920' (10)"; SQL statement:
+INSERT INTO store VALUES (433,'1440 Central Ave','Albany','NY',12205,'5184359920',2) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'7189320315' (10)"; SQL statement:
+INSERT INTO store VALUES (1602,'24-41 31st Street','Astoria','NY',11102,'7189320315',1) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'7182290138' (10)"; SQL statement:
+INSERT INTO store VALUES (106,'209-34 Northern Blvd','Bayside','NY',11361,'7182290138',2) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "STREET_ADDRESS VARCHAR(20)": "'251-21 Jericho Turnpike' (23)"; SQL statement:
+INSERT INTO store VALUES (1703,'251-21 Jericho Turnpike','Bellerose','NY',11426,'7188311289',0) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "PHONE_NUMBER CHAR(9)": "'6315371654' (10)"; SQL statement:
+INSERT INTO store VALUES (1916,'2044 Montauk Highway','Bridgehampton','NY',11932,'6315371654',2) [22001-197]
+2019-03-18 18:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "STREET_ADDRESS VARCHAR(20)": "'2040 White Plains Road' (22)"; SQL statement:
+INSERT INTO store VALUES (1667,'2040 White Plains Road','Bronx','NY',10462,'7184099260',2) [22001-197]
+2019-03-18 18:05:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TABLE" not found; SQL statement:
+delete table store [42102-197]
+2019-03-18 18:06:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP STORE[*] "; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop store [42001-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE STORE(
+   STORE_ID     INTEGER  NOT NULL PRIMARY KEY 
+  ,ADDRESS      VARCHAR(23) NOT NULL
+  ,CITY         VARCHAR(13) NOT NULL
+  ,STATE        VARCHAR(2) NOT NULL
+  ,ZIP          INTEGER  NOT NULL
+  ,PHONE_NUMBER VARCHAR(12) NOT NULL
+  ,HOURS_ID     INTEGER  NOT NULL
+ FOREIGN[*] KEY(HOURS_ID) REFERENCES HOURS
+) "; expected "AS, DEFAULT, GENERATED, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE store(
+   Store_ID     INTEGER  NOT NULL PRIMARY KEY 
+  ,Address      VARCHAR(23) NOT NULL
+  ,City         VARCHAR(13) NOT NULL
+  ,State        VARCHAR(2) NOT NULL
+  ,Zip          INTEGER  NOT NULL
+  ,Phone_Number VARCHAR(12) NOT NULL
+  ,Hours_ID     INTEGER  NOT NULL
+ foreign key(Hours_ID) references hours
+) [42001-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (71,'110 Jefferson Road','Rochester','NY',14623,'585-424-1901',0) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (797,'1370 West Ridge Road','Rochester','NY',14615,'585-865-8340',2) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1864,'1601 Old Penfield Road','Rochester','NY',14625,'585-248-5560',2) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1075,'7560 Commons Blvd','Victor','NY',14564,'585-425-8130',1) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (280,'2 Plaza Drive','Auburn','NY',13021,'315-258-9557',0) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (433,'1440 Central Ave','Albany','NY',12205,'518-435-9920',2) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1602,'24-41 31st Street','Astoria','NY',11102,'718-932-0315',1) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (106,'209-34 Northern Blvd','Bayside','NY',11361,'718-229-0138',2) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1703,'251-21 Jericho Turnpike','Bellerose','NY',11426,'718-831-1289',0) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1916,'2044 Montauk Highway','Bridgehampton','NY',11932,'631-537-1654',2) [42102-197]
+2019-03-18 18:07:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STORE" not found; SQL statement:
+INSERT INTO store(Store_ID,Address,City,State,Zip,Phone_Number,Hours_ID) VALUES (1667,'2040 White Plains Road','Bronx','NY',10462,'718-409-9260',2) [42102-197]
+2019-03-18 18:09:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UNIQUE[*] CITY FROM STORE "; expected "TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+select unique city from store [42001-197]
+2019-03-18 18:22:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM VENDOR_BRAND NATURAL JOIN BRAND ON[*] VENDOR_BRAND.BRAND_ID = BRAND.ID NATURAL JOIN VENDOR ON VENDOR.ID = VENDOR_BRAND.VENDOR_ID "; SQL statement:
+select * from vendor_brand natural join brand on vendor_brand.brand_id = brand.id natural join vendor on vendor.id = vendor_brand.vendor_id [42000-197]
+2019-03-18 18:24:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM VENDOR_BRAND NATURAL JOIN BRAND ON[*] VENDOR_BRAND.BRAND_ID = BRAND.ID "; SQL statement:
+select * from vendor_brand natural join brand on vendor_brand.brand_id = brand.id [42000-197]
+2019-03-18 18:25:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ID" not found; SQL statement:
+select * from vendor_brand natural join id [42102-197]

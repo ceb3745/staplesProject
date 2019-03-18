@@ -433,3 +433,10 @@ select * from vendor_brand natural join brand on vendor_brand.brand_id = brand.i
 2019-03-18 18:25:16 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "ID" not found; SQL statement:
 select * from vendor_brand natural join id [42102-197]
+2019-03-18 19:01:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "VENDOR" already exists; SQL statement:
+CREATE TABLE vendor(
+   Name         VARCHAR(21) NOT NULL
+  ,Vendor_ID    INTEGER  NOT NULL PRIMARY KEY 
+  ,Phone_number VARCHAR(14) NOT NULL
+) [42101-197]

@@ -35901,3 +35901,384 @@ INSERT INTO Sub_Department(SD_ID,Name,Department_ID) VALUES (12,'Laserjet Printe
 	at org.h2.server.web.WebThread.process(WebThread.java:165)
 	at org.h2.server.web.WebThread.run(WebThread.java:90)
 	at java.lang.Thread.run(Unknown Source)
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$94.61' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('41003570242','Magenta Toner XL',13,'provide the right amount of ink for everyday printing.',1864,14,'$94.61','$99.99',2) -- ('41003570242', 'Magenta Toner XL', 13, 'provide the right amount of ink for everyday printing.', 1864, 14, '$94.61', '$99.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$65.66' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('10912096814','CMY Toner Med',13,'provide the right amount of ink for everyday printing.',797,14,'$65.66','$65.99',4) -- ('10912096814', 'CMY Toner Med', 13, 'provide the right amount of ink for everyday printing.', 797, 14, '$65.66', '$65.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$47.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('63756959234','Black Toner Large',13,'provide the right amount of ink for everyday printing.',1075,14,'$47.09','$47.99',2) -- ('63756959234', 'Black Toner Large', 13, 'provide the right amount of ink for everyday printing.', 1075, 14, '$47.09', '$47.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$36.19' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('78575837786','Cyan Ink XL',13,'provide the right amount of ink for everyday printing.',106,13,'$36.19','$36.99',2) -- ('78575837786', 'Cyan Ink XL', 13, 'provide the right amount of ink for everyday printing.', 106, 13, '$36.19', '$36.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('71164493146','CMY Ink Small',13,'provide the right amount of ink for everyday printing.',1703,13,'$78.43','$78.99',1) -- ('71164493146', 'CMY Ink Small', 13, 'provide the right amount of ink for everyday printing.', 1703, 13, '$78.43', '$78.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$40.53' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('49732110647','CMY+B Ink Large',13,'provide the right amount of ink for everyday printing.',433,13,'$40.53','$45.99',3) -- ('49732110647', 'CMY+B Ink Large', 13, 'provide the right amount of ink for everyday printing.', 433, 13, '$40.53', '$45.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$68.60' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('26572671620','CMY+B Toner Small',13,'provide the right amount of ink for everyday printing.',1916,14,'$68.60','$69.99',4) -- ('26572671620', 'CMY+B Toner Small', 13, 'provide the right amount of ink for everyday printing.', 1916, 14, '$68.60', '$69.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$16.52' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('65701464130','Yellow Toner Med',13,'provide the right amount of ink for everyday printing.',71,14,'$16.52','$20.99',2) -- ('65701464130', 'Yellow Toner Med', 13, 'provide the right amount of ink for everyday printing.', 71, 14, '$16.52', '$20.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$56.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('51505615721','Yellow Ink Small',0,'Get impressive results for all your photos, creative projects and everyday prints.',1667,13,'$56.43','$59.99',1) -- ('51505615721', 'Yellow Ink Small', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 1667, 13, '$56.43', '$59.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.58' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('20763157224','CMY+B Toner XL',0,'Get impressive results for all your photos, creative projects and everyday prints.',280,14,'$78.58','$79.99',1) -- ('20763157224', 'CMY+B Toner XL', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 280, 14, '$78.58', '$79.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$88.00' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('36399214564','Black Toner Large',0,'Get impressive results for all your photos, creative projects and everyday prints.',1703,14,'$88.00','$90.99',2) -- ('36399214564', 'Black Toner Large', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 1703, 14, '$88.00', '$90.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$89.01' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('76039439890','CMY Ink XL',0,'Get impressive results for all your photos, creative projects and everyday prints.',1916,13,'$89.01','$91.99',3) -- ('76039439890', 'CMY Ink XL', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 1916, 13, '$89.01', '$91.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('21017880944','Cyan Ink Large',0,'Get impressive results for all your photos, creative projects and everyday prints.',1075,13,'$78.09','$79.99',1) -- ('21017880944', 'Cyan Ink Large', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 1075, 13, '$78.09', '$79.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$52.87' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('25151525793','Black Ink Med',0,'Get impressive results for all your photos, creative projects and everyday prints.',1864,13,'$52.87','$59.99',2) -- ('25151525793', 'Black Ink Med', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 1864, 13, '$52.87', '$59.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$84.36' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('43293041898','CMY+B Toner XL',0,'Get impressive results for all your photos, creative projects and everyday prints.',433,14,'$84.36','$91.99',3) -- ('43293041898', 'CMY+B Toner XL', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 433, 14, '$84.36', '$91.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$49.73' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('67405466722','CMY+B Ink Large',0,'Get impressive results for all your photos, creative projects and everyday prints.',106,13,'$49.73','$50.99',1) -- ('67405466722', 'CMY+B Ink Large', 0, 'Get impressive results for all your photos, creative projects and everyday prints.', 106, 13, '$49.73', '$50.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$54.68' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('49921818586','Cyan Toner Large',14,'Get consistent, professional-quality prints page after page',797,14,'$54.68','$55.99',2) -- ('49921818586', 'Cyan Toner Large', 14, 'Get consistent, professional-quality prints page after page', 797, 14, '$54.68', '$55.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$94.61' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('48352152995','CMY+B Toner Small',14,'Get consistent, professional-quality prints page after page',280,14,'$94.61','$99.99',4) -- ('48352152995', 'CMY+B Toner Small', 14, 'Get consistent, professional-quality prints page after page', 280, 14, '$94.61', '$99.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$65.66' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('77040576578','CMY Ink XL',14,'Get consistent, professional-quality prints page after page',1602,13,'$65.66','$65.99',1) -- ('77040576578', 'CMY Ink XL', 14, 'Get consistent, professional-quality prints page after page', 1602, 13, '$65.66', '$65.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$47.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('96919516667','Black Toner XL',14,'Get consistent, professional-quality prints page after page',1667,14,'$47.09','$47.99',2) -- ('96919516667', 'Black Toner XL', 14, 'Get consistent, professional-quality prints page after page', 1667, 14, '$47.09', '$47.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$36.19' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('45552778924','CMY Ink Small',14,'Get consistent, professional-quality prints page after page',1703,13,'$36.19','$36.99',1) -- ('45552778924', 'CMY Ink Small', 14, 'Get consistent, professional-quality prints page after page', 1703, 13, '$36.19', '$36.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('11034265869','Black Ink Small',14,'Get consistent, professional-quality prints page after page',1667,13,'$78.43','$78.99',2) -- ('11034265869', 'Black Ink Small', 14, 'Get consistent, professional-quality prints page after page', 1667, 13, '$78.43', '$78.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$40.53' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('90189321795','CMY Toner XL',14,'Get consistent, professional-quality prints page after page',1864,14,'$40.53','$45.99',4) -- ('90189321795', 'CMY Toner XL', 14, 'Get consistent, professional-quality prints page after page', 1864, 14, '$40.53', '$45.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$68.60' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('68431368208','CMY+B Toner XL',14,'Get consistent, professional-quality prints page after page',1916,14,'$68.60','$69.99',2) -- ('68431368208', 'CMY+B Toner XL', 14, 'Get consistent, professional-quality prints page after page', 1916, 14, '$68.60', '$69.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$16.52' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('86432449172','Black Ink Med',22,'Enjoy high-quality images and text on important prints',106,13,'$16.52','$20.99',2) -- ('86432449172', 'Black Ink Med', 22, 'Enjoy high-quality images and text on important prints', 106, 13, '$16.52', '$20.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$56.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('23890016227','Cyan Toner XL',22,'Enjoy high-quality images and text on important prints',1602,14,'$56.43','$59.99',1) -- ('23890016227', 'Cyan Toner XL', 22, 'Enjoy high-quality images and text on important prints', 1602, 14, '$56.43', '$59.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.58' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('20333584547','Black Ink Med',22,'Enjoy high-quality images and text on important prints',797,13,'$78.58','$79.99',3) -- ('20333584547', 'Black Ink Med', 22, 'Enjoy high-quality images and text on important prints', 797, 13, '$78.58', '$79.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$88.00' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('34092346957','Magenta Ink Large',22,'Enjoy high-quality images and text on important prints',280,13,'$88.00','$90.99',4) -- ('34092346957', 'Magenta Ink Large', 22, 'Enjoy high-quality images and text on important prints', 280, 13, '$88.00', '$90.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$89.01' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('17387354019','Yellow Ink Med',22,'Enjoy high-quality images and text on important prints',1075,13,'$89.01','$91.99',2) -- ('17387354019', 'Yellow Ink Med', 22, 'Enjoy high-quality images and text on important prints', 1075, 13, '$89.01', '$91.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('49860781617','Cyan Toner Small',22,'Enjoy high-quality images and text on important prints',433,14,'$78.09','$79.99',1) -- ('49860781617', 'Cyan Toner Small', 22, 'Enjoy high-quality images and text on important prints', 433, 14, '$78.09', '$79.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$52.87' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('70471998506','CMY Ink Small',22,'Enjoy high-quality images and text on important prints',1916,13,'$52.87','$59.99',1) -- ('70471998506', 'CMY Ink Small', 22, 'Enjoy high-quality images and text on important prints', 1916, 13, '$52.87', '$59.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$84.36' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('19528341266','Magenta Toner XL',22,'Enjoy high-quality images and text on important prints',106,14,'$84.36','$91.99',2) -- ('19528341266', 'Magenta Toner XL', 22, 'Enjoy high-quality images and text on important prints', 106, 14, '$84.36', '$91.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$49.73' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('37429749677','Black Ink Large',9,'Give reports, presentations and other prints exceptional quality',1602,13,'$49.73','$50.99',3) -- ('37429749677', 'Black Ink Large', 9, 'Give reports, presentations and other prints exceptional quality', 1602, 13, '$49.73', '$50.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$54.68' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('66088292744','CMY Ink Med',9,'Give reports, presentations and other prints exceptional quality',280,13,'$54.68','$55.99',1) -- ('66088292744', 'CMY Ink Med', 9, 'Give reports, presentations and other prints exceptional quality', 280, 13, '$54.68', '$55.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$94.61' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('10858444515','Black Ink XL',9,'Give reports, presentations and other prints exceptional quality',797,13,'$94.61','$99.99',2) -- ('10858444515', 'Black Ink XL', 9, 'Give reports, presentations and other prints exceptional quality', 797, 13, '$94.61', '$99.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$65.66' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('73282539219','CMY+B Ink Small',9,'Give reports, presentations and other prints exceptional quality',433,13,'$65.66','$65.99',3) -- ('73282539219', 'CMY+B Ink Small', 9, 'Give reports, presentations and other prints exceptional quality', 433, 13, '$65.66', '$65.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$47.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('23949853334','CMY Ink XL',9,'Give reports, presentations and other prints exceptional quality',71,13,'$47.09','$47.99',1) -- ('23949853334', 'CMY Ink XL', 9, 'Give reports, presentations and other prints exceptional quality', 71, 13, '$47.09', '$47.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$36.19' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('19036636179','Black Toner Med',9,'Give reports, presentations and other prints exceptional quality',1703,14,'$36.19','$36.99',2) -- ('19036636179', 'Black Toner Med', 9, 'Give reports, presentations and other prints exceptional quality', 1703, 14, '$36.19', '$36.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('36561051766','Black Toner XL',9,'Give reports, presentations and other prints exceptional quality',1667,14,'$78.43','$78.99',4) -- ('36561051766', 'Black Toner XL', 9, 'Give reports, presentations and other prints exceptional quality', 1667, 14, '$78.43', '$78.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$40.53' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('64129389721','CMY+B Ink Large',9,'Give reports, presentations and other prints exceptional quality',1075,13,'$40.53','$45.99',1) -- ('64129389721', 'CMY+B Ink Large', 9, 'Give reports, presentations and other prints exceptional quality', 1075, 13, '$40.53', '$45.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$68.60' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('38367981431','Magenta Toner Small',6,'Ensure image and text printing quality',280,14,'$68.60','$69.99',2) -- ('38367981431', 'Magenta Toner Small', 6, 'Ensure image and text printing quality', 280, 14, '$68.60', '$69.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$16.52' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('63674943304','CMY+B Ink Small',6,'Ensure image and text printing quality',433,13,'$16.52','$20.99',1) -- ('63674943304', 'CMY+B Ink Small', 6, 'Ensure image and text printing quality', 433, 13, '$16.52', '$20.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$56.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('42657306477','Yellow Ink Small',6,'Ensure image and text printing quality',1667,13,'$56.43','$59.99',2) -- ('42657306477', 'Yellow Ink Small', 6, 'Ensure image and text printing quality', 1667, 13, '$56.43', '$59.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.58' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('17092284353','Black Toner Med',6,'Ensure image and text printing quality',1703,14,'$78.58','$79.99',4) -- ('17092284353', 'Black Toner Med', 6, 'Ensure image and text printing quality', 1703, 14, '$78.58', '$79.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$88.00' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('54997824360','Yellow Toner Small',6,'Ensure image and text printing quality',1602,14,'$88.00','$90.99',2) -- ('54997824360', 'Yellow Toner Small', 6, 'Ensure image and text printing quality', 1602, 14, '$88.00', '$90.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$89.01' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('63174729203','Black Ink Small',6,'Ensure image and text printing quality',797,13,'$89.01','$91.99',2) -- ('63174729203', 'Black Ink Small', 6, 'Ensure image and text printing quality', 797, 13, '$89.01', '$91.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('53228728941','Cyan Ink XL',6,'Ensure image and text printing quality',1916,13,'$78.09','$79.99',1) -- ('53228728941', 'Cyan Ink XL', 6, 'Ensure image and text printing quality', 1916, 13, '$78.09', '$79.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$52.87' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('41219547248','Black Ink Med',6,'Ensure image and text printing quality',106,13,'$52.87','$59.99',3) -- ('41219547248', 'Black Ink Med', 6, 'Ensure image and text printing quality', 106, 13, '$52.87', '$59.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$84.36' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('96174996571','CMY+B Ink Med',5,'Make quick work of big print jobs',1864,13,'$84.36','$91.99',4) -- ('96174996571', 'CMY+B Ink Med', 5, 'Make quick work of big print jobs', 1864, 13, '$84.36', '$91.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$49.73' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('17332888251','CMY Ink Small',5,'Make quick work of big print jobs',71,13,'$49.73','$50.99',2) -- ('17332888251', 'CMY Ink Small', 5, 'Make quick work of big print jobs', 71, 13, '$49.73', '$50.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$54.68' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('17133613387','Magenta Toner Small',5,'Make quick work of big print jobs',797,14,'$54.68','$55.99',1) -- ('17133613387', 'Magenta Toner Small', 5, 'Make quick work of big print jobs', 797, 14, '$54.68', '$55.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$94.61' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('31263386179','CMY Ink XL',5,'Make quick work of big print jobs',1667,13,'$94.61','$99.99',1) -- ('31263386179', 'CMY Ink XL', 5, 'Make quick work of big print jobs', 1667, 13, '$94.61', '$99.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$65.66' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('63781227130','Cyan Ink Med',5,'Make quick work of big print jobs',1864,13,'$65.66','$65.99',2) -- ('63781227130', 'Cyan Ink Med', 5, 'Make quick work of big print jobs', 1864, 13, '$65.66', '$65.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$47.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('43511326138','Cyan Ink XL',5,'Make quick work of big print jobs',1602,13,'$47.09','$47.99',3) -- ('43511326138', 'Cyan Ink XL', 5, 'Make quick work of big print jobs', 1602, 13, '$47.09', '$47.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$36.19' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('86575673903','Black Toner Med',5,'Make quick work of big print jobs',1916,14,'$36.19','$36.99',1) -- ('86575673903', 'Black Toner Med', 5, 'Make quick work of big print jobs', 1916, 14, '$36.19', '$36.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('89944070080','Black Ink Large',5,'Make quick work of big print jobs',1075,13,'$78.43','$78.99',2) -- ('89944070080', 'Black Ink Large', 5, 'Make quick work of big print jobs', 1075, 13, '$78.43', '$78.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$40.53' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('27693181410','Magenta Toner XL',23,'provide the right amount of ink for everyday printing.',280,14,'$40.53','$45.99',3) -- ('27693181410', 'Magenta Toner XL', 23, 'provide the right amount of ink for everyday printing.', 280, 14, '$40.53', '$45.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$68.60' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('27010021116','Cyan Ink Small',23,'provide the right amount of ink for everyday printing.',1703,13,'$68.60','$69.99',1) -- ('27010021116', 'Cyan Ink Small', 23, 'provide the right amount of ink for everyday printing.', 1703, 13, '$68.60', '$69.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$16.52' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('59990126993','CMY Toner Large',23,'provide the right amount of ink for everyday printing.',106,14,'$16.52','$20.99',2) -- ('59990126993', 'CMY Toner Large', 23, 'provide the right amount of ink for everyday printing.', 106, 14, '$16.52', '$20.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$56.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('38355519057','CMY+B Toner Small',23,'provide the right amount of ink for everyday printing.',71,14,'$56.43','$59.99',4) -- ('38355519057', 'CMY+B Toner Small', 23, 'provide the right amount of ink for everyday printing.', 71, 14, '$56.43', '$59.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.58' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('20959675086','Magenta Toner XL',23,'provide the right amount of ink for everyday printing.',1864,14,'$78.58','$79.99',1) -- ('20959675086', 'Magenta Toner XL', 23, 'provide the right amount of ink for everyday printing.', 1864, 14, '$78.58', '$79.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$88.00' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('49373842645','CMY+B Ink Large',23,'provide the right amount of ink for everyday printing.',433,13,'$88.00','$90.99',2) -- ('49373842645', 'CMY+B Ink Large', 23, 'provide the right amount of ink for everyday printing.', 433, 13, '$88.00', '$90.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$89.01' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('98205607961','Yellow Ink Med',23,'provide the right amount of ink for everyday printing.',1075,13,'$89.01','$91.99',2) -- ('98205607961', 'Yellow Ink Med', 23, 'provide the right amount of ink for everyday printing.', 1075, 13, '$89.01', '$91.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('94150064347','CMY Toner Med',23,'provide the right amount of ink for everyday printing.',1703,14,'$78.09','$79.99',1) -- ('94150064347', 'CMY Toner Med', 23, 'provide the right amount of ink for everyday printing.', 1703, 14, '$78.09', '$79.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$52.87' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('95394613902','CMY Ink Large',13,'Get impressive results for all your photos, creative projects and everyday prints.',1602,13,'$52.87','$59.99',3) -- ('95394613902', 'CMY Ink Large', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 1602, 13, '$52.87', '$59.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$84.36' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('28376920791','Yellow Toner Small',13,'Get impressive results for all your photos, creative projects and everyday prints.',1916,14,'$84.36','$91.99',4) -- ('28376920791', 'Yellow Toner Small', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 1916, 14, '$84.36', '$91.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$49.73' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('61399249998','Black Ink Large',13,'Get impressive results for all your photos, creative projects and everyday prints.',797,13,'$49.73','$50.99',2) -- ('61399249998', 'Black Ink Large', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 797, 13, '$49.73', '$50.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$54.68' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('68880024000','Yellow Toner Med',13,'Get impressive results for all your photos, creative projects and everyday prints.',106,14,'$54.68','$55.99',1) -- ('68880024000', 'Yellow Toner Med', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 106, 14, '$54.68', '$55.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$94.61' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('27702365217','Yellow Toner Med',13,'Get impressive results for all your photos, creative projects and everyday prints.',1667,14,'$94.61','$99.99',1) -- ('27702365217', 'Yellow Toner Med', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 1667, 14, '$94.61', '$99.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$65.66' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('76878770012','CMY+B Ink Large',13,'Get impressive results for all your photos, creative projects and everyday prints.',280,13,'$65.66','$65.99',2) -- ('76878770012', 'CMY+B Ink Large', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 280, 13, '$65.66', '$65.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$47.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('18409354052','CMY Ink Small',13,'Get impressive results for all your photos, creative projects and everyday prints.',71,13,'$47.09','$47.99',3) -- ('18409354052', 'CMY Ink Small', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 71, 13, '$47.09', '$47.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$36.19' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('31080066130','Magenta Ink Large',13,'Get impressive results for all your photos, creative projects and everyday prints.',433,13,'$36.19','$36.99',1) -- ('31080066130', 'Magenta Ink Large', 13, 'Get impressive results for all your photos, creative projects and everyday prints.', 433, 13, '$36.19', '$36.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('29272724321','CMY+B Ink Med',0,'Get consistent, professional-quality prints page after page',280,13,'$78.43','$78.99',2) -- ('29272724321', 'CMY+B Ink Med', 0, 'Get consistent, professional-quality prints page after page', 280, 13, '$78.43', '$78.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$40.53' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('99271747428','CMY Toner Med',0,'Get consistent, professional-quality prints page after page',1864,14,'$40.53','$45.99',3) -- ('99271747428', 'CMY Toner Med', 0, 'Get consistent, professional-quality prints page after page', 1864, 14, '$40.53', '$45.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$68.60' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('35282154025','Magenta Ink Med',0,'Get consistent, professional-quality prints page after page',1667,13,'$68.60','$69.99',1) -- ('35282154025', 'Magenta Ink Med', 0, 'Get consistent, professional-quality prints page after page', 1667, 13, '$68.60', '$69.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$16.52' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('80025154829','Black Ink Small',0,'Get consistent, professional-quality prints page after page',1075,13,'$16.52','$20.99',2) -- ('80025154829', 'Black Ink Small', 0, 'Get consistent, professional-quality prints page after page', 1075, 13, '$16.52', '$20.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$56.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('52851936529','Black Ink XL',0,'Get consistent, professional-quality prints page after page',1916,13,'$56.43','$59.99',4) -- ('52851936529', 'Black Ink XL', 0, 'Get consistent, professional-quality prints page after page', 1916, 13, '$56.43', '$59.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.58' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('13081093311','CMY Ink Med',0,'Get consistent, professional-quality prints page after page',1703,13,'$78.58','$79.99',1) -- ('13081093311', 'CMY Ink Med', 0, 'Get consistent, professional-quality prints page after page', 1703, 13, '$78.58', '$79.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$88.00' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('11806408260','Black Ink Small',0,'Get consistent, professional-quality prints page after page',797,13,'$88.00','$90.99',2) -- ('11806408260', 'Black Ink Small', 0, 'Get consistent, professional-quality prints page after page', 797, 13, '$88.00', '$90.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$89.01' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('11304664787','Black Toner XL',0,'Get consistent, professional-quality prints page after page',1602,14,'$89.01','$91.99',1) -- ('11304664787', 'Black Toner XL', 0, 'Get consistent, professional-quality prints page after page', 1602, 14, '$89.01', '$91.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('59020752087','Cyan Ink Small',14,'Enjoy high-quality images and text on important prints',1864,13,'$78.09','$79.99',2) -- ('59020752087', 'Cyan Ink Small', 14, 'Enjoy high-quality images and text on important prints', 1864, 13, '$78.09', '$79.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$52.87' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('43589033567','Cyan Ink Med',14,'Enjoy high-quality images and text on important prints',797,13,'$52.87','$59.99',4) -- ('43589033567', 'Cyan Ink Med', 14, 'Enjoy high-quality images and text on important prints', 797, 13, '$52.87', '$59.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$84.36' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('92051415636','Magenta Toner XL',14,'Enjoy high-quality images and text on important prints',1075,14,'$84.36','$91.99',2) -- ('92051415636', 'Magenta Toner XL', 14, 'Enjoy high-quality images and text on important prints', 1075, 14, '$84.36', '$91.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$49.73' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('16159710748','CMY+B Ink Large',14,'Enjoy high-quality images and text on important prints',106,13,'$49.73','$50.99',2) -- ('16159710748', 'CMY+B Ink Large', 14, 'Enjoy high-quality images and text on important prints', 106, 13, '$49.73', '$50.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$54.68' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('86913053036','CMY Toner Med',14,'Enjoy high-quality images and text on important prints',1703,14,'$54.68','$55.99',1) -- ('86913053036', 'CMY Toner Med', 14, 'Enjoy high-quality images and text on important prints', 1703, 14, '$54.68', '$55.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$94.61' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('41234802233','Black Ink Large',14,'Enjoy high-quality images and text on important prints',433,13,'$94.61','$99.99',3) -- ('41234802233', 'Black Ink Large', 14, 'Enjoy high-quality images and text on important prints', 433, 13, '$94.61', '$99.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$65.66' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('54533671002','Black Toner Med',14,'Enjoy high-quality images and text on important prints',1916,14,'$65.66','$65.99',4) -- ('54533671002', 'Black Toner Med', 14, 'Enjoy high-quality images and text on important prints', 1916, 14, '$65.66', '$65.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$47.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('46514287362','CMY+B Ink Large',14,'Enjoy high-quality images and text on important prints',71,13,'$47.09','$47.99',2) -- ('46514287362', 'CMY+B Ink Large', 14, 'Enjoy high-quality images and text on important prints', 71, 13, '$47.09', '$47.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$36.19' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('72353556051','Black Toner Large',22,'Give reports, presentations and other prints exceptional quality',1667,14,'$36.19','$36.99',1) -- ('72353556051', 'Black Toner Large', 22, 'Give reports, presentations and other prints exceptional quality', 1667, 14, '$36.19', '$36.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('10397984481','Yellow Toner Large',22,'Give reports, presentations and other prints exceptional quality',280,14,'$78.43','$78.99',1) -- ('10397984481', 'Yellow Toner Large', 22, 'Give reports, presentations and other prints exceptional quality', 280, 14, '$78.43', '$78.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$40.53' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('95505747038','Black Toner Small',22,'Give reports, presentations and other prints exceptional quality',1703,14,'$40.53','$45.99',2) -- ('95505747038', 'Black Toner Small', 22, 'Give reports, presentations and other prints exceptional quality', 1703, 14, '$40.53', '$45.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$68.60' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('72176483092','Yellow Ink XL',22,'Give reports, presentations and other prints exceptional quality',1916,13,'$68.60','$69.99',3) -- ('72176483092', 'Yellow Ink XL', 22, 'Give reports, presentations and other prints exceptional quality', 1916, 13, '$68.60', '$69.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$16.52' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('44765013649','CMY Ink XL',22,'Give reports, presentations and other prints exceptional quality',1075,13,'$16.52','$20.99',1) -- ('44765013649', 'CMY Ink XL', 22, 'Give reports, presentations and other prints exceptional quality', 1075, 13, '$16.52', '$20.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$56.43' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('21088164128','Black Toner Large',22,'Give reports, presentations and other prints exceptional quality',1864,14,'$56.43','$59.99',2) -- ('21088164128', 'Black Toner Large', 22, 'Give reports, presentations and other prints exceptional quality', 1864, 14, '$56.43', '$59.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.58' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('16729591939','CMY Toner Med',22,'Give reports, presentations and other prints exceptional quality',433,14,'$78.58','$79.99',3) -- ('16729591939', 'CMY Toner Med', 22, 'Give reports, presentations and other prints exceptional quality', 433, 14, '$78.58', '$79.99', 3) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$88.00' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('65376163844','Black Toner Med',22,'Give reports, presentations and other prints exceptional quality',106,14,'$88.00','$90.99',1) -- ('65376163844', 'Black Toner Med', 22, 'Give reports, presentations and other prints exceptional quality', 106, 14, '$88.00', '$90.99', 1) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$89.01' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('40896138714','Magenta Toner Large',9,'Ensure image and text printing quality',797,14,'$89.01','$91.99',2) -- ('40896138714', 'Magenta Toner Large', 9, 'Ensure image and text printing quality', 797, 14, '$89.01', '$91.99', 2) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$78.09' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('13757514689','Yellow Toner Large',9,'Ensure image and text printing quality',280,14,'$78.09','$79.99',4) -- ('13757514689', 'Yellow Toner Large', 9, 'Ensure image and text printing quality', 280, 14, '$78.09', '$79.99', 4) [22018-197]
+2019-03-21 10:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'$52.87' (PRODUCT: PRICE NUMERIC(6, 2) NOT NULL)"; SQL statement:
+INSERT INTO product(UPC,Product_Name,Brand_ID,Details,Store_ID,SD_ID,Price,MSRP,Quantity) VALUES ('55387062721','Black Toner Large',9,'Ensure image and text printing quality',1602,14,'$52.87','$59.99',1) -- ('55387062721', 'Black Toner Large', 9, 'Ensure image and text printing quality', 1602, 14, '$52.87', '$59.99', 1) [22018-197]
+2019-03-21 10:38:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO SUB_DEPARTMENT VALUES (13, INK, 0), (14, TONER 0[*]) "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into sub_department values (13, Ink, 0), (14, Toner 0) [42001-197]
+2019-03-21 10:38:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "INK" not found; SQL statement:
+insert into sub_department values (13, Ink, 0), (14, Toner, 0) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-21 10:38:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "INK" not found; SQL statement:
+insert into sub_department values(13, Ink, 0) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-21 11:18:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT SD_ID FROM SUB_DEPARTMENT WHERE DEPARTMENT_ID = '0' NATURAL[*] JOIN PRODUCT "; SQL statement:
+select sd_id from sub_department where department_id = '0' natural join product [42000-197]
+2019-03-21 11:19:13 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "SD_ID"; SQL statement:
+select sd_id from sub_department natural join product where department_id = '0' natural join product [90059-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:127)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:97)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1237)
+	at org.h2.command.dml.Select.init(Select.java:826)
+	at org.h2.command.Parser.parseSelect(Parser.java:1925)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-21 11:21:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM (SELECT SD_ID FROM SUB_DEPARTMENT WHERE DEPARTMENT_ID = '0' NATURAL[*] JOIN PRODUCT) NATURAL JOIN PRODUCT "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+select * from (select sd_id from sub_department where department_id = '0' natural join product) natural join product [42001-197]
+2019-03-21 11:21:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM PRODUCT NATURAL JOIN (SELECT SD_ID FROM SUB_DEPARTMENT WHERE DEPARTMENT_ID = '0' NATURAL[*] JOIN PRODUCT) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+select * from product natural join (select sd_id from sub_department where department_id = '0' natural join product) [42001-197]
+2019-03-21 11:22:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM PRODUCT NATURAL JOIN (SELECT * FROM(SELECT SD_ID FROM SUB_DEPARTMENT WHERE DEPARTMENT_ID = '0' NATURAL[*] JOIN PRODUCT) ) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+select * from product natural join (select * from(select sd_id from sub_department where department_id = '0' natural join product) ) [42001-197]

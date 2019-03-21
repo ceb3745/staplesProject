@@ -19,6 +19,15 @@ public class POS_UI extends Application {
     public int store_id = -1;
     ClientControl cc = new ClientControl();
 
+    public POS_UI() {
+        super();
+    }
+
+    @Override
+    public void init() throws Exception {
+        super.init();
+    }
+
     @Override
     public void start(Stage primaryStage) {
         if(store_id == -1) {

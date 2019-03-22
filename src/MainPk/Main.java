@@ -38,7 +38,6 @@ public class Main {
                 // Run Cashier UI
                 POS_UI pu = new POS_UI();
                 pu.run();
-
                 break;
             case 3:
                 // Run Customer UI

@@ -1,5 +1,6 @@
 package MainPk;
 
+import DBAdmin.DBAdminController;
 import POS_Application.ClientControl;
 import POS_Application.POS_UI;
 
@@ -30,7 +31,8 @@ public class Main {
 
         switch (choice) {
             case 1:
-                // Run Admin UI
+                DBAdminController DBC = new DBAdminController();
+                DBC.startUp();
                 break;
             case 2:
                 // Run Cashier UI

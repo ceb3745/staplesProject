@@ -81,17 +81,8 @@ public class DBAdminView {
 
             }
 
-
-
-
-
-
-
-
         }
         //System.out.println(userPass.get(0)[0]+" "+userPass.get(0)[1]);
         return 0;
-
     }
-
 }

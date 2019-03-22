@@ -33,6 +33,8 @@ public class Main {
             case 1:
                 DBAdminController DBC = new DBAdminController();
                 DBC.startUp();
+
+                
                 break;
             case 2:
                 // Run Cashier UI

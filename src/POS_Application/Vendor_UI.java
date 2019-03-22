@@ -26,7 +26,7 @@ public class Vendor_UI
             input = sc.nextLine();
         }
 
-        switch(input)
+        switch(Integer.parseInt(input))
         {
             case 1:
                 reorder_status = make_reorder_request();
@@ -36,8 +36,8 @@ public class Vendor_UI
         }
 
     }
-    public boolean make_reorder_request() {
-        Scanner sc = new Scanner();
+    public static boolean make_reorder_request() {
+        Scanner sc = new Scanner(System.in);
         String request_id; //Retrieve the previous from the database and increase by 1
         String date;
         String time;
@@ -60,10 +60,11 @@ public class Vendor_UI
         upc = sc.nextLine(); //Check the database for the existence of the UPC
 
         //Send the query to insert a reorder request
+        return false;
     }
     public boolean fill_reorder_request()
     {
-
+        return true;
     }
 
 }

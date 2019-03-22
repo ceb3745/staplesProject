@@ -34,7 +34,7 @@ public class Main {
                 DBAdminController DBC = new DBAdminController();
                 DBC.startUp();
 
-                
+
                 break;
             case 2:
                 // Run Cashier UI

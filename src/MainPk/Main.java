@@ -1,3 +1,7 @@
+package MainPk;
+
+import POS_Application.ClientControl;
+
 import java.util.Scanner;
 
 public class Main {
@@ -29,6 +33,7 @@ public class Main {
                 break;
             case 2:
                 // Run Cashier UI
+                ClientControl cc = new ClientControl(new SQLExecutor());
                 break;
             case 3:
                 // Run Customer UI

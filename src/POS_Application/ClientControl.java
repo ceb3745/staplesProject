@@ -1,5 +1,7 @@
 package POS_Application;
 
+import MainPk.SQLExecutor;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,8 +15,10 @@ public class ClientControl {
     Connection conn;
     int store_id;
     StringBuilder sb;
+    SQLExecutor sqlExecutor;
 
-    ClientControl(){
+    ClientControl(SQLExecutor sqlExecutor){
+        
     }
 
     /**

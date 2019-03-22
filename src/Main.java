@@ -10,7 +10,18 @@ public class Main {
                            "5. Vendor?");
 
         Scanner sc = new Scanner(System.in);
-        int choice = sc.nextInt();
+        boolean validInputReceived = false;
+        int choice = 0;
+
+        while(!validInputReceived) {
+            try {
+                choice = Integer.parseInt(sc.nextLine());
+
+                validInputReceived = true;
+            } catch(Exception e) {
+                System.out.print("Invalid input, try again: ");
+            }
+        }
 
         switch (choice) {
             case 1:
@@ -29,7 +40,7 @@ public class Main {
                 // Run Vendor UI
                 break;
             default:
-                System.out.println("Invalid choice, try again: ");
+                System.out.print("Invalid choice, try again: ");
         }
     }
 }

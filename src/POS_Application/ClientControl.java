@@ -17,8 +17,8 @@ public class ClientControl {
     StringBuilder sb;
     SQLExecutor sqlExecutor;
 
-    ClientControl(SQLExecutor sqlExecutor){
-        
+    public ClientControl(SQLExecutor sqlExecutor){
+        this.sqlExecutor = sqlExecutor;
     }
 
     /**

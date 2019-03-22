@@ -56,6 +56,7 @@ public class SQLExecutor {
             result = statement.executeQuery(query);
         } catch(SQLException e) {
             System.out.println("Something went wrong during query execution: " + e);
+            return null;
         }
         return result;
     }

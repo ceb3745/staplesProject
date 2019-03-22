@@ -25,7 +25,7 @@ public class DBAdminView {
         System.out.println("Entering security protocol...\n");
         //security check
         Security mySecurity = new Security(userPass);
-        int check = mySecurity.securityCheckpoint();
+        int check = 0;//mySecurity.securityCheckpoint();
         if(check == 1){
             System.out.println("Exiting database...");
         }else{
@@ -37,6 +37,8 @@ public class DBAdminView {
             Scanner sc = new Scanner(System.in);
             boolean done =false;
             int cols;
+            String titles = "";
+            String row = "";
             while(!done){
                 input = sc.nextLine();
                 if(input.equalsIgnoreCase("Quit")){
@@ -46,39 +48,46 @@ public class DBAdminView {
                 }else{
                     //send input to controller
                     System.out.println("sending input \n\"" + input + "\"\nto the database...");
-                    ResultSet result = myDBC.getResult(input);
-//                    if(result is bad){
-//                        System.out.println("Invalid SQL here is the error SQL gave us...");
-//                    }else{
-//
-//                    }
-                    //put the below line in the else above
-                    try{
-                        result.next();
-                        ResultSetMetaData rsmd = result.getMetaData();
-                        cols = rsmd.getColumnCount();
-                        for(int i = 1; i < cols+1; i++){
-                            //need to format these strings but for now its ok
-                            System.out.print(rsmd.getColumnName(i));
-                        }
-                        System.out.println();
-                        while(!result.isLast()){
-                            for (int i = 1; i < cols+1; i++){
-                                System.out.print(" | "+ result.getObject(i).toString()+" | ");
-                            }
-                            System.out.println();
+                    try {
+                        ResultSet result = myDBC.getResult(input);
+                        if (result != null){
+                            //put the below line in the else above
                             result.next();
+                            ResultSetMetaData rsmd = result.getMetaData();
+                            cols = rsmd.getColumnCount();
+                            for (int i = 1; i < cols + 1; i++) {
+                                //need to format these strings but for now its ok
+                                //System.out.print(rsmd.getColumnName(i));
+                                //below i can use the max length of a col name if its larger than 15
+                                titles+=String.format("|%-20s|",rsmd.getColumnName(i));
+                            }
+                            System.out.print(titles);
+                            System.out.println();
+                            while (!result.isLast()) {
+                                for (int i = 1; i < cols + 1; i++) {
+                                    //System.out.print(" | " + result.getObject(i).toString() + " | ");
+                                    row+=String.format("|%-20s|",result.getObject(i).toString());
+                                }
+                                System.out.print(row);
+                                System.out.println();
+                                row="";
+                                result.next();
+                            }
+                            for (int i = 1; i < cols + 1; i++) {
+                                //System.out.print(" | " + result.getObject(i).toString() + " | ");
+                                row+=String.format("|%-20s|",result.getObject(i).toString());
+                            }
+                            System.out.print(row);
+                            //System.out.println();
+                            row="";
+                            System.out.println("\nEnd of query results...");
                         }
-                        for (int i = 1; i < cols+1; i++){
-                            System.out.print(" | "+ result.getObject(i).toString()+" | ");
-                        }
-                        System.out.println("that it for this query...");
                     }catch (SQLException e){
                         e.printStackTrace();
                     }
 
                 }
-
+                titles="";
             }
 
         }

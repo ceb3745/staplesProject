@@ -1,3 +1,5 @@
+package MainPk;
+
 import java.sql.*;
 
 /**
@@ -9,7 +11,7 @@ public class SQLExecutor {
     private Connection conn;
 
     /**
-     * Creates a new SQLExecutor
+     * Creates a new MainPk.SQLExecutor
      */
     public SQLExecutor() {
         dbLocation = "jdbc:h2:./staplesProject";

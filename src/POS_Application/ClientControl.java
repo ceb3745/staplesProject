@@ -1,7 +1,5 @@
 package POS_Application;
 
-import javax.swing.plaf.nimbus.State;
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,15 +17,32 @@ public class ClientControl {
     ClientControl(){
     }
 
+    /**
+     *
+     * @param store_id
+     */
     public void setStoreId(int store_id){
         this.store_id = store_id;
     }
 
+    /**
+     *
+     * @param conn
+     */
     public void setConnection(Connection conn){
         this.conn = conn;
     }
 
     //First_Name,Last_Name,Phone_Number,Member_ID,Member_Type,Email
+    /**
+     *
+     * @param fn
+     * @param ln
+     * @param phone_number
+     * @param member_type
+     * @param email
+     * @return
+     */
     public ResultSet becomeAMember(String fn, String ln, String phone_number, String member_type, String email){
         if(conn == null){
             return null;
@@ -57,6 +72,18 @@ public class ClientControl {
     }
 
     //Store_ID,Sale_ID,Member_ID,Payment_Type,Card_Number,Time,Month,Day,Year
+    /**
+     *
+     * @param upc
+     * @param quantity
+     * @param card_number
+     * @param member_id
+     * @param payment_type
+     * @param time
+     * @param month
+     * @param day
+     * @param year
+     */
     public void addSale(int upc, int quantity, int card_number, int member_id, String payment_type, String time, int month, int day, int year){
         if(conn == null){
             return;
@@ -125,6 +152,11 @@ public class ClientControl {
     }
 
     //check valid store_num
+    /**
+     *
+     * @param store_num
+     * @return
+     */
     public boolean findStore(int store_num){
         if(conn == null){
             return false;

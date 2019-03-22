@@ -1,23 +1,21 @@
 package POS_Application;
 
+import MainPk.SQLExecutor;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class POS_UI extends Application {
+public class POS_UI extends Application implements Runnable {
     public int store_id = -1;
-    ClientControl cc = new ClientControl();
+    private ClientControl cc = new ClientControl(new SQLExecutor());
 
     public POS_UI() {
         super();
@@ -107,8 +105,12 @@ public class POS_UI extends Application {
         }
     }
 
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         launch(args);
+    }
+
+    @Override
+    public void run() {
+        main(null);
     }
 }

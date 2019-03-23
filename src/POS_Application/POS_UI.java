@@ -20,7 +20,7 @@ public class POS_UI extends Application implements Runnable {
     public int store_id = -1;
     public int member_id = -99;
     public boolean finalize = false;
-    private ClientControl cc;
+    private static ClientControl cc;
     Cart myCart = new Cart();
 
     public POS_UI() {

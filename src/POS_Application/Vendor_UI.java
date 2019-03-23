@@ -4,7 +4,7 @@ import java.util.Scanner;
 /*
 * TODO:
 * Handle filling reorder requests
-* Handle queries to the database for authentification
+* Handle queries to the database for authentication
 * Handle queries to make a reorder request
 * Handle queries to mark reorder requests filled
 * Handle queries to update the product count

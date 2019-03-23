@@ -19,6 +19,8 @@ public class Main {
         boolean validInputReceived = false;
         int choice = 0;
 
+        SQLExecutor executor = new SQLExecutor();
+
         while(!validInputReceived) {
             try {
                 choice = Integer.parseInt(sc.nextLine());
@@ -38,7 +40,7 @@ public class Main {
                 break;
             case 2:
                 // Run Cashier UI
-                POS_UI pu = new POS_UI();
+                POS_UI pu = new POS_UI(executor);
                 pu.run();
                 break;
             case 3:

@@ -15,17 +15,21 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import jdk.internal.util.xml.impl.Input;
 
 public class POS_UI extends Application implements Runnable {
     public int store_id = -1;
     public int member_id = -99;
     public boolean finalize = false;
-    private ClientControl cc = new ClientControl(new SQLExecutor());
+    private ClientControl cc;
     Cart myCart = new Cart();
 
     public POS_UI() {
         super();
+    }
+
+    public POS_UI(SQLExecutor executor) {
+        super();
+        cc = new ClientControl(executor);
     }
 
     @Override

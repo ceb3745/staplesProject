@@ -52,7 +52,7 @@ public class SQLExecutor {
     public ResultSet executeQuery(String query) {
         ResultSet result = null;
         try {
-            Statement statement = conn.createStatement();
+            Statement statement = conn.createStatement(java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
             result = statement.executeQuery(query);
         } catch(SQLException e) {
             System.out.println("Something went wrong during query execution: " + e);

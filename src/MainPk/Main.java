@@ -20,6 +20,7 @@ public class Main {
         int choice = 0;
 
         SQLExecutor executor = new SQLExecutor();
+        executor.startConnection("sa", "");
 
         while(!validInputReceived) {
             try {
@@ -33,7 +34,7 @@ public class Main {
 
         switch (choice) {
             case 1:
-                DBAdminController DBC = new DBAdminController();
+                DBAdminController DBC = new DBAdminController(executor);
                 DBC.startUp();
 
 
@@ -55,5 +56,7 @@ public class Main {
             default:
                 System.out.print("Invalid choice, try again: ");
         }
+
+        executor.closeConnection();
     }
 }

@@ -75,6 +75,7 @@ public class Vendor_UI
             request_id = lastRequestID;
         }catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
 
         //Interface with the vendor
@@ -173,6 +174,7 @@ public class Vendor_UI
             }
         }catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
         return true;
     }

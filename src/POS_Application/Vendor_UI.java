@@ -1,5 +1,6 @@
 package POS_Application;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import MainPk.SQLExecutor;
 import POS_Application.Model.Cart;
@@ -15,7 +16,7 @@ import java.util.Calendar;
 
 public class Vendor_UI
 {
-    private SQLExecutor executor;
+    private static SQLExecutor executor;
 
     public static void main(String[] args)
     {
@@ -54,11 +55,11 @@ public class Vendor_UI
         Scanner sc = new Scanner(System.in);
         executor = new SQLExecutor();
         ResultSet rs = null;
-        String request_id; //Retrieve the previous from the database and increase by 1
+        int request_id = 0; //Retrieve the previous from the database and increase by 1
         int lastRequestID = -1;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate localDate = LocalDate.now();
-        String date = dtf.format(localDate));
+        String date = dtf.format(localDate);
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
         String time = sdf.format(cal.getTime());
@@ -71,14 +72,14 @@ public class Vendor_UI
         //get next reorder request number
         String currentID = "select top 1 * from reorder_request by request_id desc";
 
-        rs = sqlExecutor.executeQuery(currentID);
+        rs = executor.executeQuery(currentID);
         try{
             lastRequestID = rs.getInt(2);
+            lastRequestID++;
+            request_id = lastRequestID;
         }catch (SQLException e) {
             e.printStackTrace();
         }
-        lastRequestID++;
-        request_id = lastRequestID;
 
         System.out.println("REORDER REQUEST\n-------------------");
         System.out.println("Enter your vendor name:");
@@ -116,7 +117,7 @@ public class Vendor_UI
         executor.executeQuery(sb.toString());
         return true;
     }
-    public boolean fill_reorder_request()
+    public static boolean fill_reorder_request()
     {
         executor = new SQLExecutor();
         ResultSet rs = null;
@@ -125,22 +126,25 @@ public class Vendor_UI
         String oldQuantity = "";
         String reorder_id = "";
         System.out.println("Retrieving reorder requests from the database.");
-        String grabRequests = "select * from reorder_request where delivered = 'false'");
+        String grabRequests = "select * from reorder_request where delivered = 'false'";
         rs = executor.executeQuery(grabRequests);
-        rs.next();
+        try{
+            //Grabbing all important information
+            upc = rs.getString(7);
+            quantity = Integer.parseInt(rs.getString(8));
+            reorder_id = rs.getString(1);
 
-        //Grabbing all important information
-        upc = rs.getString(7);
-        quantity = Integer.parseInt(rs.getString(8));
-        reorder_id = rs.getString(1);
-
-        String grabOldQuantity = "select quantity from Product where upc = '" + upc + "'";
-        rs = executor.executeQuery(grabOldQuantity);
-        quantity += Integer.parseInt(rs.next().getString(1));
-
-        //Updating the product table
-        String updateProduct = "update product set quantity = '" + quantity.toString() + "' where upc = '" + upc + "'";
-        rs = executor.executeQuery(updateProduct);
+            String grabOldQuantity = "select quantity from Product where upc = '" + upc + "'";
+            rs = executor.executeQuery(grabOldQuantity);
+            rs.next();
+            quantity += Integer.parseInt(rs.getString(1));
+            rs.next();
+            //Updating the product table
+            String updateProduct = "update product set quantity = '" + quantity + "' where upc = '" + upc + "'";
+            rs = executor.executeQuery(updateProduct);
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         //Updating the reorder_request table
         String updateReorderRequest = "update reorder_request set delivered = 'true' where reorder_id = '" + reorder_id + "'";

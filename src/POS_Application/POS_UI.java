@@ -15,7 +15,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import jdk.internal.util.xml.impl.Input;
 
 import javax.xml.soap.Text;
 import java.util.Calendar;
@@ -28,11 +27,16 @@ public class POS_UI extends Application implements Runnable {
     boolean cash = false;
     boolean credit = false;
     boolean saleDone = false;
-    private ClientControl cc = new ClientControl(new SQLExecutor());
+    private static ClientControl cc;
     Cart myCart = new Cart();
 
     public POS_UI() {
         super();
+    }
+
+    public POS_UI(SQLExecutor executor) {
+        super();
+        cc = new ClientControl(executor);
     }
 
     @Override

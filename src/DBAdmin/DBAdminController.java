@@ -10,12 +10,9 @@ public class DBAdminController {
     DBAdminView myView;
     SQLExecutor mySQLE;
 
-    public DBAdminController(){
-
-        mySQLE = new SQLExecutor();
+    public DBAdminController(SQLExecutor executor){
+        mySQLE = executor;
         myView = new DBAdminView(this);
-        mySQLE.startConnection("sa","");
-
     }
 
     public void startUp(){

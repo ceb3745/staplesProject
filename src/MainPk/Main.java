@@ -19,6 +19,9 @@ public class Main {
         boolean validInputReceived = false;
         int choice = 0;
 
+        SQLExecutor executor = new SQLExecutor();
+        executor.startConnection("sa", "");
+
         while(!validInputReceived) {
             try {
                 choice = Integer.parseInt(sc.nextLine());
@@ -31,14 +34,14 @@ public class Main {
 
         switch (choice) {
             case 1:
-                DBAdminController DBC = new DBAdminController();
+                DBAdminController DBC = new DBAdminController(executor);
                 DBC.startUp();
 
 
                 break;
             case 2:
                 // Run Cashier UI
-                POS_UI pu = new POS_UI();
+                POS_UI pu = new POS_UI(executor);
                 pu.run();
                 break;
             case 3:
@@ -53,5 +56,7 @@ public class Main {
             default:
                 System.out.print("Invalid choice, try again: ");
         }
+
+        executor.closeConnection();
     }
 }

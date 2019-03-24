@@ -39,6 +39,9 @@ public class DBAdminView {
             int cols;
             String titles = "";
             String row = "";
+            String format="";
+            ArrayList<Integer> colWidths;
+            int maxW = 0,thisW=0;
             while(!done){
                 input = sc.nextLine();
                 if(input.equalsIgnoreCase("Quit")){
@@ -52,32 +55,55 @@ public class DBAdminView {
                         ResultSet result = myDBC.getResult(input);
                         if (result != null){
                             //put the below line in the else above
-                            result.next();
+                            result.first();
                             ResultSetMetaData rsmd = result.getMetaData();
                             cols = rsmd.getColumnCount();
-                            for (int i = 1; i < cols + 1; i++) {
+
+                            colWidths = new ArrayList<>();
+                            //System.out.println(cols);
+                            for( int c = 1; c <= cols; c++ ){
+                                maxW = rsmd.getColumnName(c).length();
+                                result.first();
+                                while(!result.isAfterLast()){
+                                    thisW = result.getObject(c).toString().length();
+                                    //System.out.println(result.getObject(c).toString());
+                                    if(thisW > maxW){
+                                        maxW = thisW;
+                                    }
+                                    result.next();
+                                }
+                                colWidths.add(maxW);
+                            }
+                            //colWidths.forEach((n) -> System.out.print(n + "  "));
+                            System.out.println();
+                            result.first();
+
+                            for (int i = 1; i <= cols; i++) {
                                 //need to format these strings but for now its ok
                                 //System.out.print(rsmd.getColumnName(i));
                                 //below i can use the max length of a col name if its larger than 15
-                                titles+=String.format("|%-20s|",rsmd.getColumnName(i));
+                                format = "|%-"+(2+colWidths.get(i-1))+"s|";
+                                titles+=String.format(format,rsmd.getColumnName(i));
                             }
                             System.out.print(titles);
                             System.out.println();
-                            while (!result.isLast()) {
-                                for (int i = 1; i < cols + 1; i++) {
+                            while (!result.isAfterLast()) {
+                                for (int i = 1; i <= cols; i++) {
                                     //System.out.print(" | " + result.getObject(i).toString() + " | ");
-                                    row+=String.format("|%-20s|",result.getObject(i).toString());
+                                    //System.out.println(result.getObject(i).toString());
+                                    format = "|%-"+(2+ colWidths.get(i-1))+"s|";
+                                    row+=String.format(format,result.getObject(i).toString());
                                 }
                                 System.out.print(row);
                                 System.out.println();
                                 row="";
                                 result.next();
                             }
-                            for (int i = 1; i < cols + 1; i++) {
-                                //System.out.print(" | " + result.getObject(i).toString() + " | ");
-                                row+=String.format("|%-20s|",result.getObject(i).toString());
-                            }
-                            System.out.print(row);
+//                            for (int i = 1; i <= cols; i++) {
+//                                //System.out.print(" | " + result.getObject(i).toString() + " | ");
+//                                row+=String.format("|%-20s|",result.getObject(i).toString());
+//                            }
+//                            System.out.print(row);
                             //System.out.println();
                             row="";
                             System.out.println("\nEnd of query results...");

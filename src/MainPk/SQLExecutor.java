@@ -1,5 +1,7 @@
 package MainPk;
 
+import org.h2.tools.Server;
+
 import java.sql.*;
 
 /**
@@ -9,12 +11,13 @@ import java.sql.*;
 public class SQLExecutor {
     private final String dbLocation;
     private Connection conn;
+    private Server server;
 
     /**
      * Creates a new MainPk.SQLExecutor
      */
     public SQLExecutor() {
-        dbLocation = "jdbc:h2:./staplesProject";
+        dbLocation = "jdbc:h2:tcp://localhost:8082/home/";
     }
 
     /**
@@ -26,7 +29,8 @@ public class SQLExecutor {
     public void startConnection(String user, String password) {
         try {
             Class.forName("org.h2.Driver");
-            conn = DriverManager.getConnection(dbLocation, user, password);
+            server = Server.createTcpServer().start();
+            conn = DriverManager.getConnection("jdbc:h2:" + server.getURL() + "/./staplesProject", user, password);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
@@ -38,6 +42,7 @@ public class SQLExecutor {
     public void closeConnection() {
         try {
             conn.close();
+            server.shutdown();
         } catch(SQLException e) {
             e.printStackTrace();
         }
@@ -52,7 +57,7 @@ public class SQLExecutor {
     public ResultSet executeQuery(String query) {
         ResultSet result = null;
         try {
-            Statement statement = conn.createStatement();
+            Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
             result = statement.executeQuery(query);
         } catch(SQLException e) {
             System.out.println("Something went wrong during query execution: " + e);

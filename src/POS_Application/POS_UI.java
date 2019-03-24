@@ -377,7 +377,7 @@ public class POS_UI extends Application implements Runnable {
 
                                 product.getChildren().removeAll(cashAmount, cashNum, submit);
                                 Label totalNum = new Label("Total: " + total);
-                                Label change = new Label("Change: " + (total - Integer.parseInt(cashNum.getText())));
+                                Label change = new Label("Change: " + (total - Float.parseFloat(cashNum.getText())));
                                 product.getChildren().addAll(totalNum, change);
 
                             }

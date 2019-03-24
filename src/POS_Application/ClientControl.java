@@ -45,17 +45,17 @@ public class ClientControl {
     public ResultSet becomeAMember(String fn, String ln, String phone_number, String member_type, String email){
         sb = new StringBuilder();
         ResultSet rs;
-        sb.append("insert into member values("
+        sb.append("insert into member values('"
                 +fn
-                + ", "
+                + "', '"
                 + ln
-                + ", "
+                + "', '"
                 + phone_number
-                + ", "
+                + "', '"
                 + member_type
-                + ", "
+                + "', '"
                 + email
-                + ");");
+                + "');");
         sqlExecutor.executeQuery(sb.toString());
         return null;
     }
@@ -91,25 +91,25 @@ public class ClientControl {
         curr_sale_id = lastSaleIndex;
 
         //add sale to sale table
-        sb.append("insert into sale values("
+        sb.append("insert into sale values('"
                     + store_id
-                    + ", "
+                    + "', '"
                     + lastSaleIndex
-                    + ", "
+                    + "', '"
                     + member_id
-                    + ", "
+                    + "', '"
                     + payment_type
-                    + ", "
+                    + "', '"
                     + card_number
-                    + ", "
+                    + "', '"
                     + time
-                    + ", "
+                    + "', '"
                     + month
-                    + ", "
+                    + "', '"
                     + day
-                    + ", "
+                    + "', '"
                     + year
-                    + ");");
+                    + "');");
 
         sqlExecutor.executeQuery(sb.toString());
 
@@ -120,7 +120,8 @@ public class ClientControl {
     //add sale_item to existing sale
     public void addItem(String upc, int quantity){
         ResultSet rs = null;
-        String query = "insert into saleitem values(" + upc +", " + curr_sale_id + ", "+ quantity + ");";
+
+        String query = "insert into saleitem values('" + upc +"', '" + curr_sale_id + "', '"+ quantity + "');";
         sqlExecutor.executeQuery(query);
     }
 

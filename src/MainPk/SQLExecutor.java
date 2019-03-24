@@ -42,7 +42,7 @@ public class SQLExecutor {
     public void closeConnection() {
         try {
             conn.close();
-            server.shutdown();
+            server.stop();
         } catch(SQLException e) {
             e.printStackTrace();
         }

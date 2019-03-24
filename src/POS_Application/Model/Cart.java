@@ -43,4 +43,12 @@ public class Cart {
         return sb.toString();
     }
 
+    public int getCartSize(){
+        return products.size();
+    }
+
+    public Product getProduct(int index){
+        return products.get(index);
+    }
+
 }

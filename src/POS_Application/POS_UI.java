@@ -17,10 +17,17 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import jdk.internal.util.xml.impl.Input;
 
+import javax.xml.soap.Text;
+import java.util.Calendar;
+import java.util.Date;
+
 public class POS_UI extends Application implements Runnable {
     public int store_id = -1;
     public int member_id = -99;
     public boolean finalize = false;
+    boolean cash = false;
+    boolean credit = false;
+    boolean saleDone = false;
     private ClientControl cc = new ClientControl(new SQLExecutor());
     Cart myCart = new Cart();
 
@@ -230,42 +237,161 @@ public class POS_UI extends Application implements Runnable {
                     primaryStage.show();
                 }
                 else{
-                    myCart.setMember_id(member_id);
-                    Label staplesTitle = new Label("Staples");
-                    staplesTitle.setStyle("-fx-alignment: center; -fx-font-size: 190%; -fx-padding: 10px");
-                    staplesTitle.setPrefWidth(700);
-                    VBox outerVB = new VBox();
-                    outerVB.setAlignment(Pos.TOP_CENTER);
-                    Label labelStoreNum = new Label("Store Number: " + String.valueOf(store_id));
-                    Label memberlabel = new Label("Member ID: " + String.valueOf(member_id));
-                    HBox tophb = new HBox();
-                    tophb.setAlignment(Pos.TOP_LEFT);
-                    tophb.getChildren().addAll(labelStoreNum, memberlabel);
+                    if(credit != true && cash != true) {
+                        myCart.setMember_id(member_id);
+                        Label staplesTitle = new Label("Staples");
+                        staplesTitle.setStyle("-fx-alignment: center; -fx-font-size: 190%; -fx-padding: 10px");
+                        staplesTitle.setPrefWidth(700);
+                        VBox outerVB = new VBox();
+                        outerVB.setAlignment(Pos.TOP_CENTER);
+                        Label labelStoreNum = new Label("Store Number: " + String.valueOf(store_id));
+                        Label memberlabel = new Label("Member ID: " + String.valueOf(member_id));
+                        HBox tophb = new HBox();
+                        tophb.setAlignment(Pos.TOP_LEFT);
+                        tophb.getChildren().addAll(labelStoreNum, memberlabel);
 
-                    Label cart = new Label(myCart.listProducts());
-                    HBox product = new HBox();
-                    Label prompt = new Label("Credit Card: ");
-                    TextField textField = new TextField();
-                    Button submit = new Button("Submit");
-                    product.getChildren().addAll(prompt, textField, submit);
-                    VBox vBox = new VBox();
-                    vBox.getChildren().addAll(cart, product);
-                    BorderPane bp = new BorderPane();
-                    bp.setCenter(vBox);
+                        Label cart = new Label(myCart.listProducts());
+                        HBox product = new HBox();
 
-                    textField.setOnAction(new EventHandler<ActionEvent>() {
-                        @Override
-                        public void handle(ActionEvent event) {
+                        Button creditCard = new Button("Credit Card");
+                        Button cashB = new Button("Cash");
+                        product.getChildren().addAll(creditCard, cashB);
 
-                        }
-                    });
+                        creditCard.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                //enter card screen
+                                credit = true;
+                                primaryStage.hide();
+                                start(new Stage());
+                            }
+                        });
 
-                    outerVB.getChildren().addAll(staplesTitle, tophb, bp);
-                    Scene scene = new Scene(outerVB, 700, 500);
+                        cashB.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                // enter cash screen
+                                cash = true;
+                                primaryStage.hide();
+                                start(new Stage());
+                            }
+                        });
 
-                    primaryStage.setTitle("Staples POS Systems");
-                    primaryStage.setScene(scene);
-                    primaryStage.show();
+                        VBox vBox = new VBox();
+                        vBox.getChildren().addAll(cart, product);
+                        BorderPane bp = new BorderPane();
+                        bp.setCenter(vBox);
+
+                        outerVB.getChildren().addAll(staplesTitle, tophb, bp);
+                        Scene scene = new Scene(outerVB, 700, 500);
+
+                        primaryStage.setTitle("Staples POS Systems");
+                        primaryStage.setScene(scene);
+                        primaryStage.show();
+                    }
+                    else if(credit){
+                        Label staplesTitle = new Label("Staples");
+                        staplesTitle.setStyle("-fx-alignment: center; -fx-font-size: 190%; -fx-padding: 10px");
+                        staplesTitle.setPrefWidth(700);
+                        VBox outerVB = new VBox();
+                        outerVB.setAlignment(Pos.TOP_CENTER);
+                        Label labelStoreNum = new Label("Store Number: " + String.valueOf(store_id));
+                        Label memberlabel = new Label("Member ID: " + String.valueOf(member_id));
+                        HBox tophb = new HBox();
+                        tophb.setAlignment(Pos.TOP_LEFT);
+                        tophb.getChildren().addAll(labelStoreNum, memberlabel);
+
+                        Label cart = new Label(myCart.listProducts());
+                        HBox product = new HBox();
+
+                        Label creditCardNo = new Label("Card Number: ");
+                        TextField creditCardNum = new TextField();
+                        Button submit = new Button("Submit Sale");
+                        product.getChildren().addAll(creditCardNo, creditCardNum, submit);
+
+                        submit.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                Calendar cal = Calendar.getInstance();
+                                Date currentTime = cal.getTime();
+
+                                cc.addSale(Integer.parseInt(creditCardNum.getText()), member_id, "Card", "" + currentTime.getTime(), currentTime.getMonth(), currentTime.getDay(), currentTime.getYear() );
+                                for(int i=0; i<myCart.getCartSize(); i++){
+                                    Product temp = myCart.getProduct(i);
+                                    cc.addItem(temp.getUPC(), temp.getQuantity());
+                                }
+
+
+                            }
+                        });
+
+                        VBox vBox = new VBox();
+                        vBox.getChildren().addAll(cart, product);
+                        BorderPane bp = new BorderPane();
+                        bp.setCenter(vBox);
+
+                        outerVB.getChildren().addAll(staplesTitle, tophb, bp);
+                        Scene scene = new Scene(outerVB, 700, 500);
+
+                        primaryStage.setTitle("Staples POS Systems");
+                        primaryStage.setScene(scene);
+                        primaryStage.show();
+                    }
+                    else{
+                        Label staplesTitle = new Label("Staples");
+                        staplesTitle.setStyle("-fx-alignment: center; -fx-font-size: 190%; -fx-padding: 10px");
+                        staplesTitle.setPrefWidth(700);
+                        VBox outerVB = new VBox();
+                        outerVB.setAlignment(Pos.TOP_CENTER);
+                        Label labelStoreNum = new Label("Store Number: " + String.valueOf(store_id));
+                        Label memberlabel = new Label("Member ID: " + String.valueOf(member_id));
+                        HBox tophb = new HBox();
+                        tophb.setAlignment(Pos.TOP_LEFT);
+                        tophb.getChildren().addAll(labelStoreNum, memberlabel);
+
+                        Label cart = new Label(myCart.listProducts());
+                        HBox product = new HBox();
+
+                        Label cashAmount = new Label("Cash Amount: ");
+                        TextField cashNum = new TextField();
+                        Button submit = new Button("Submit Sale");
+                        product.getChildren().addAll(cashAmount, cashNum, submit);
+
+                        submit.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                Calendar cal = Calendar.getInstance();
+                                Date currentTime = cal.getTime();
+                                float total = 0;
+
+                                cc.addSale(-1 , member_id, "Cash", "" + currentTime.getTime(), currentTime.getMonth(), currentTime.getDay(), currentTime.getYear() );
+                                for(int i=0; i<myCart.getCartSize(); i++){
+                                    Product temp = myCart.getProduct(i);
+                                    System.out.println(temp.getUPC());
+                                    cc.addItem(temp.getUPC(), temp.getQuantity());
+                                    total += cc.getProductPrice(temp.getUPC());
+                                }
+
+                                product.getChildren().removeAll(cashAmount, cashNum, submit);
+                                Label totalNum = new Label("Total: " + total);
+                                Label change = new Label("Change: " + (total - Integer.parseInt(cashNum.getText())));
+                                product.getChildren().addAll(totalNum, change);
+
+                            }
+                        });
+
+                        VBox vBox = new VBox();
+                        vBox.getChildren().addAll(cart, product);
+                        BorderPane bp = new BorderPane();
+                        bp.setCenter(vBox);
+
+                        outerVB.getChildren().addAll(staplesTitle, tophb, bp);
+                        Scene scene = new Scene(outerVB, 700, 500);
+
+                        primaryStage.setTitle("Staples POS Systems");
+                        primaryStage.setScene(scene);
+                        primaryStage.show();
+                    }
                 }
             }
         }

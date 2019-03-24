@@ -77,10 +77,11 @@ public class ClientControl {
         int lastSaleIndex = -1;
 
         //get next sale number
-        String init = "select top 1 * from sale by sale_id desc";
+        String init = "select top 1 * from sale order by sale_id desc";
 
         rs = sqlExecutor.executeQuery(init);
         try{
+            rs.next();
             lastSaleIndex = rs.getInt(2);
         }catch (SQLException e) {
             e.printStackTrace();
@@ -191,6 +192,23 @@ public class ClientControl {
         }
 
         return null;
+    }
+
+    public float getProductPrice(String upc){
+        String query = "select * from product where upc=" + upc + ";";
+        ResultSet rs;
+        try{
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            if(!rs.getString(1).equals(upc)){
+                return -1;
+            }
+            return rs.getFloat(7);
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
     }
 
 }

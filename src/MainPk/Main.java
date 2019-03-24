@@ -36,8 +36,6 @@ public class Main {
             case 1:
                 DBAdminController DBC = new DBAdminController(executor);
                 DBC.startUp();
-
-
                 break;
             case 2:
                 // Run Cashier UI
@@ -56,7 +54,7 @@ public class Main {
             default:
                 System.out.print("Invalid choice, try again: ");
         }
-
+        sc.close();
         executor.closeConnection();
     }
 }

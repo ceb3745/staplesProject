@@ -9,16 +9,8 @@ import java.sql.*;
  * and queries to that database.
  */
 public class SQLExecutor {
-    private final String dbLocation;
     private Connection conn;
     private Server server;
-
-    /**
-     * Creates a new MainPk.SQLExecutor
-     */
-    public SQLExecutor() {
-        dbLocation = "jdbc:h2:tcp://localhost:8082/home/";
-    }
 
     /**
      * Starts a new connection using the given username and password

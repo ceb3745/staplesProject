@@ -55,12 +55,17 @@ public class SQLExecutor {
      * @return a ResultSet containing the query results
      */
     public ResultSet executeQuery(String query) {
-        ResultSet result = null;
+        ResultSet result;
         try {
             Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
             result = statement.executeQuery(query);
         } catch(SQLException e) {
-            System.out.println("Something went wrong during query execution: " + e);
+            try {
+                Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+                statement.executeUpdate(query);
+            } catch(SQLException f) {
+                System.out.println("Could not execute sql statement");
+            }
             return null;
         }
         return result;

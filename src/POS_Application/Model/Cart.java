@@ -39,6 +39,9 @@ public class Cart {
             sb.append("Quantity: ");
             sb.append(products.get(i).getQuantity());
             sb.append(" \n");
+            sb.append("Price: ");
+            sb.append(products.get(i).getPrice());
+            sb.append("\n");
         }
         return sb.toString();
     }
@@ -49,6 +52,14 @@ public class Cart {
 
     public Product getProduct(int index){
         return products.get(index);
+    }
+
+    public float getTotal(){
+        float total = 0;
+        for(int i=0; i<products.size(); i++){
+            total += products.get(i).getPrice();
+        }
+        return total;
     }
 
 }

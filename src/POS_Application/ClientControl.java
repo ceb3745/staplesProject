@@ -71,7 +71,7 @@ public class ClientControl {
      * @param day
      * @param year
      */
-    public void addSale(int card_number, int member_id, String payment_type, String time, int month, int day, int year){
+    public void addSale(String card_number, int member_id, String payment_type, String time, int month, int day, int year){
         ResultSet rs = null;
         sb = new StringBuilder();
         int lastSaleIndex = -1;
@@ -187,7 +187,7 @@ public class ClientControl {
             if(!rs.getString(1).equals(upc)){
                 return null;
             }
-            return new Product(rs.getString(1), 1, rs.getString(2));
+            return new Product(rs.getString(1), 1, rs.getString(2), rs.getFloat(7));
         }catch (SQLException e) {
             e.printStackTrace();
         }

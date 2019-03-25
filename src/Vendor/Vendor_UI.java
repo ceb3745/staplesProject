@@ -1,4 +1,4 @@
-package POS_Application;
+package Vendor;
 
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -167,7 +167,7 @@ public class Vendor_UI
                 rs = executor.executeQuery(updateProduct);
 
                 //Updating the reorder_request table
-                String updateReorderRequest = "update reorder_request set delivered = 'true' where reorder_id = '" + request_id[counter] + "'";
+                String updateReorderRequest = "update reorder_request set delivered = 'true' where request_id = '" + request_id[counter] + "'";
                 rs = executor.executeQuery(updateReorderRequest);
 
                 counter--;

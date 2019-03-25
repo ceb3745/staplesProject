@@ -141,6 +141,7 @@ public class ClientControl {
             if(rs.getInt(1) != store_num){
                 return false;
             }
+            store_id = store_num;
         }catch (SQLException e) {
             e.printStackTrace();
         }

@@ -16,6 +16,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -353,10 +354,18 @@ public class POS_UI extends Application implements Runnable {
                             submit.setOnAction(new EventHandler<ActionEvent>() {
                                 @Override
                                 public void handle(ActionEvent event) {
-                                    Calendar cal = Calendar.getInstance();
-                                    Date currentTime = cal.getTime();
+                                    SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+                                    Date date = new Date(System.currentTimeMillis());
+                                    SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
+                                    SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
+                                    SimpleDateFormat dayFormat = new SimpleDateFormat("dd");
+                                    SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
+                                    String year = yearFormat.format(date);
+                                    String month = monthFormat.format(date);
+                                    String day = dayFormat.format(date);
+                                    String time = timeFormat.format(date);
 
-                                    cc.addSale(creditCardNum.getText(), member_id, "Card", "" + currentTime.getTime(), currentTime.getMonth(), currentTime.getDay(), currentTime.getYear());
+                                    cc.addSale(creditCardNum.getText(), member_id, "Card", time, Integer.parseInt(month), Integer.parseInt(day), Integer.parseInt(year));
                                     for (int i = 0; i < myCart.getCartSize(); i++) {
                                         Product temp = myCart.getProduct(i);
                                         cc.addItem(temp.getUPC(), temp.getQuantity());
@@ -407,8 +416,6 @@ public class POS_UI extends Application implements Runnable {
                             submit.setOnAction(new EventHandler<ActionEvent>() {
                                 @Override
                                 public void handle(ActionEvent event) {
-                                    Calendar cal = Calendar.getInstance();
-                                    Date currentTime = cal.getTime();
                                     float total = myCart.getTotal();
                                     if (total > Float.parseFloat(cashNum.getText())) {
                                         Label errorField = new Label("Please give more cash than the given total.");
@@ -416,8 +423,18 @@ public class POS_UI extends Application implements Runnable {
                                         vBox.getChildren().add(1, errorField);
                                         return;
                                     }
+                                    SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+                                    Date date = new Date(System.currentTimeMillis());
+                                    SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
+                                    SimpleDateFormat monthFormat = new SimpleDateFormat("MM");
+                                    SimpleDateFormat dayFormat = new SimpleDateFormat("dd");
+                                    SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
+                                    String year = yearFormat.format(date);
+                                    String month = monthFormat.format(date);
+                                    String day = dayFormat.format(date);
+                                    String time = timeFormat.format(date);
 
-                                    cc.addSale(-1 + "", member_id, "Cash", "" + currentTime.getTime(), currentTime.getMonth(), currentTime.getDay(), currentTime.getYear());
+                                    cc.addSale(-1 + "", member_id, "Card", time, Integer.parseInt(month), Integer.parseInt(day), Integer.parseInt(year));
                                     for (int i = 0; i < myCart.getCartSize(); i++) {
 
                                         Product temp = myCart.getProduct(i);

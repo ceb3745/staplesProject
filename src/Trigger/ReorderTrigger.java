@@ -8,8 +8,7 @@ import java.text.SimpleDateFormat;
 /**
  * How to setup the database for this trigger:
  *
- * Create the trigger: CREATE TRIGGER my_trigger BEFORE UPDATE ON product FOR EACH ROW CALL ""
- *
+ * Create the trigger: CREATE TRIGGER my_trigger BEFORE UPDATE ON product FOR EACH ROW CALL "Trigger.ReorderTrigger"
  */
 public class ReorderTrigger implements Trigger {
 

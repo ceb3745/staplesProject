@@ -1,7 +1,6 @@
 package MainPk;
 
 import DBAdmin.DBAdminController;
-import POS_Application.ClientControl;
 import POS_Application.POS_UI;
 
 import java.util.Scanner;

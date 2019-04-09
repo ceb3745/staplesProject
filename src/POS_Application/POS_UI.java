@@ -30,7 +30,7 @@ public class POS_UI extends Application implements Runnable {
     private static ClientControl cc;
     Cart myCart = new Cart();
 
-    public POS_UI() {
+    public POS_UI(){
         super();
     }
 

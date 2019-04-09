@@ -2,9 +2,12 @@ package Customer_Application;
 
 import MainPk.SQLExecutor;
 import POS_Application.Model.Product;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -78,16 +81,225 @@ public class CustomerControl {
     //50, 100, 150
     int packQuantity = -1;
 
+    //PRINTER
+    //Inkjet, LaserJet
+    String typeOfPrinter = "";
+    //Yes, No
+    String wirelessReady = "";
+    //Business, Personal, Small Business
+    String printTechnology = "";
+    //Yes, No
+    String mobileCapability = "";
+    //monochrome, color
+    String outputType = "";
 
+    public ArrayList<VBox> laptopSearch(String ram, String os, String processor, String hhd, String ss, String ts, String dt, String audio){
+        sb = new StringBuilder();
+        sb.append("select product.UPC, Product_name from laptop natural join computer natural join product");
+        boolean ramB = (!ram.equals(""));
+        boolean osB = (!os.equals(""));
+        boolean processorB = (!processor.equals(""));
+        boolean hhdB = (!hhd.equals(""));
+        boolean ssB = (!ss.equals(""));
+        boolean tsB = (!ts.equals(""));
+        boolean dtB = (!dt.equals(""));
+        boolean audioB = (!audio.equals(""));
+        if(ramB || osB || processorB || hhdB || ssB || tsB || dtB || audioB){
+            sb.append(" where ");
+            if(!ram.equals("")){
+                sb.append("ram='" + ram + "' ");
+            }
+            if(!os.equals("")){
+                if(ramB){sb.append(" AND ");}
+                sb.append("os='" + os + "' ");
+            }
+            if(!processor.equals("")){
+                if(osB || ramB){sb.append(" AND ");}
+                sb.append("processor='" + processor+ "' ");
+            }
+            if(!hhd.equals("")){
+                if(hhdB || ramB || osB){sb.append(" AND ");}
+                sb.append("ssd='" + hhd+ "' ");
+            }
+            if(!ss.equals("")){
+                if(hhdB || ramB || osB || processorB){sb.append(" AND ");}
+                sb.append("screen_size='" + ss + "' ");
+            }
+            if(!ts.equals("")){
+                if(hhdB || ramB || osB || processorB || ssB){sb.append(" AND ");}
+                sb.append("touchscreen='" + ts + "' ");
+            }
+            if(!dt.equals("")){
+                if(hhdB || ramB || osB || processorB || ssB || tsB){sb.append(" AND ");}
+                sb.append("displaytype='" + dt + "' ");
+            }
+            if(!audio.equals("")){
+                if(hhdB || ramB || osB || processorB || ssB || tsB || dtB){sb.append(" AND ");}
+                sb.append("audio='" + audio + "' ");
+            }
+        }
+        sb.append(";");
+        String query = sb.toString();
+
+        ResultSet rs;
+        ArrayList<VBox> arr = new ArrayList<>();
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            if(!rs.first()){
+                return arr;
+            }
+            while(!rs.isAfterLast()){
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
+    }
+
+    public ArrayList<VBox> computerSearch(String ram, String os, String processor, String hhd){
+        sb = new StringBuilder();
+        sb.append("select product.UPC, Product_name from computer natural join product");
+        boolean ramB = (!ram.equals(""));
+        boolean osB = (!os.equals(""));
+        boolean processorB = (!processor.equals(""));
+        boolean hhdB = (!hhd.equals(""));
+        if(ramB || osB || processorB || hhdB){
+            sb.append(" where ");
+            if(!ram.equals("")){
+                sb.append("ram='" + ram + "' ");
+            }
+            if(!os.equals("")){
+                if(ramB){sb.append(" AND ");}
+                sb.append("os='" + os + "' ");
+            }
+            if(!processor.equals("")){
+                if(osB || ramB){sb.append(" AND ");}
+                sb.append("processor='" + processor+ "' ");
+            }
+            if(!hhd.equals("")){
+                if(hhdB || ramB || osB){sb.append(" AND ");}
+                sb.append("ssd='" + hhd+ "' ");
+            }
+        }
+        sb.append(";");
+        String query = sb.toString();
+
+        ResultSet rs;
+        ArrayList<VBox> arr = new ArrayList<>();
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            if(!rs.first()){
+                return arr;
+            }
+            while(!rs.isAfterLast()){
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
+    }
 
     public CustomerControl(SQLExecutor sqlExecutor){
         this.sqlExecutor = sqlExecutor;
         sqlExecutor.startConnection("sa", "");
     }
 
-    public ArrayList<HBox> getTop5Products(){
-        String query = "select * from saleitem";
-        return null;
+    public ArrayList<VBox> getTop5Products(){
+        String query = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+                "product natural join saleitem natural join sale)\n" +
+                "select UPC,Product_name, storeID,sum(quantity) as total_quantity from storeSalesProduct group by UPC " +
+                "order by total_quantity desc limit 5";
+        ResultSet rs;
+        ArrayList<VBox> arr = new ArrayList<>();
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            for(int i=0; i<5; i++){
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
+    }
+
+    public String getDetails(String UPC){
+        String query = "select * from product where UPC='" + UPC + "';";
+        ResultSet rs;
+        String details = "";
+        try{
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            details = rs.getString(4);
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return details;
     }
 
     //add a department deliminator
@@ -116,6 +328,161 @@ public class CustomerControl {
         }
         this.sub_dept_name = sub_dept_name;
         return true;
+    }
+
+    public ArrayList<VBox> search(String searchTerm){
+        String searchTermNew = "";
+        if(searchTerm.length() != 0){
+            searchTermNew = Character.toUpperCase(searchTerm.charAt(0)) + searchTerm.substring(1, searchTerm.length());
+        }
+        String query = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+                "product natural join saleitem natural join sale)\n" +
+                "select UPC,Product_name, storeID,sum(quantity) as total_quantity from storeSalesProduct " +
+                "where product_name like " + "\'%" + searchTermNew + "%\'" +
+                "group by UPC order by total_quantity desc limit 20;";
+
+        ResultSet rs;
+        ArrayList<VBox> arr = new ArrayList<>();
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            if(!rs.first()){
+                searchName(arr, searchTerm);
+                return arr;
+            }
+            while(!rs.isAfterLast()){
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+            if(arr.size() < 20){
+                searchName(arr, searchTerm);
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
+    }
+
+    public ArrayList<VBox> searchName(ArrayList<VBox> arr, String searchTerm){
+        String searchTermNew = Character.toUpperCase(searchTerm.charAt(0)) + searchTerm.substring(1, searchTerm.length());
+        String previousQuery = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+                "product natural join saleitem natural join sale)\n" +
+                "select product_name as total_quantity from storeSalesProduct " +
+                "where product_name like " + "\'%" + searchTermNew + "%\'" +
+                "group by UPC order by total_quantity desc limit 20";
+        String query = "(select * from product where product_name like " + "\'%" + searchTermNew + "%\' and product_name NOT IN ("+ previousQuery + "));";
+
+        ResultSet rs;
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            if(!rs.first()){
+                searchDetails(arr, searchTerm);
+                return arr;
+            }
+            rs.next();
+            while(!rs.isAfterLast()){
+                if(arr.size() == 20){
+                    return arr;
+                }
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+            if(arr.size() < 20){
+                searchDetails(arr, searchTerm);
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
+    }
+
+    public ArrayList<VBox> searchDetails(ArrayList<VBox> arr, String searchTerm){
+        String searchTermNew = Character.toUpperCase(searchTerm.charAt(0)) + searchTerm.substring(1, searchTerm.length());
+        String previousQuery = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+                "product natural join saleitem natural join sale)\n" +
+                "select product_name as total_quantity from storeSalesProduct " +
+                "where product_name like " + "\'%" + searchTermNew + "%\'" +
+                "group by UPC order by total_quantity desc limit 20";
+        String query = "(select * from product where details like " + "\'%" + searchTerm + "%\' and product_name NOT IN ("+ previousQuery + "));";
+
+        ResultSet rs;
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            if(!rs.first()){
+                return arr;
+            }
+            rs.next();
+            while(!rs.isAfterLast()){
+                if(arr.size() == 20){
+                    return arr;
+                }
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
     }
 
 }

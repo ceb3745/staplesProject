@@ -1,5 +1,6 @@
 package MainPk;
 
+import Customer_Application.Cust_UI;
 import DBAdmin.DBAdminController;
 import POS_Application.POS_UI;
 
@@ -43,6 +44,8 @@ public class Main {
                 break;
             case 3:
                 // Run Customer UI
+                Cust_UI cu = new Cust_UI(executor);
+                cu.run();
                 break;
             case 4:
                 // Run Store Manager UI

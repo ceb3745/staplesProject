@@ -56,7 +56,8 @@ public class SQLExecutor {
                 Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
                 statement.executeUpdate(query);
             } catch(SQLException f) {
-                f.printStackTrace();
+                //f.printStackTrace();
+                System.out.println(f.getMessage());
                 System.out.println("Could not execute sql statement");
             }
             return null;

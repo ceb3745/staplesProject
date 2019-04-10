@@ -664,6 +664,112 @@ public class Cust_UI extends Application implements Runnable{
                     }
                 });
 
+                //desktopSubmit
+                desktopSubmit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        root.getChildren().remove(0, root.getChildren().size());
+                        String ramS = "";
+                        String osS = "";
+                        String processorS = "";
+                        String hhdS = "";
+                        String heightS = "";
+                        String widthS = "";
+                        String depthS = "";
+                        String odS = "";
+
+                        RadioButton selectedram = (RadioButton) ram.getSelectedToggle();
+                        if(selectedram != null){
+                            ramS = selectedram.getText();
+                        }
+                        RadioButton selectedos = (RadioButton) os.getSelectedToggle();
+                        if(selectedos != null){
+                            osS = selectedos.getText();
+                        }
+                        RadioButton selectedprocessor = (RadioButton) processor.getSelectedToggle();
+                        if(selectedprocessor != null){
+                            processorS = selectedprocessor.getText();
+                        }
+                        RadioButton selectedhhd = (RadioButton) hhd.getSelectedToggle();
+                        if(selectedhhd != null){
+                            hhdS = selectedhhd.getText();
+                        }
+                        TextField heightT = (TextField)heightD.getChildren().get(1);
+                        if(heightT != null){
+                            heightS = heightT.getText();
+                        }
+                        TextField widthT = (TextField)widthD.getChildren().get(1);
+                        if(widthT != null){
+                            widthS = widthT.getText();
+                        }
+                        TextField depthT = (TextField)depthD.getChildren().get(1);
+                        if(depthT != null){
+                            depthS = depthT.getText();
+                        }
+                        RadioButton selectedod = (RadioButton) od.getSelectedToggle();
+                        if(selectedod != null){
+                            odS = selectedod.getText();
+                        }
+
+                        innerVB.getChildren().remove(0,innerVB.getChildren().size());
+                        ArrayList<VBox> productsHBoxes = cc.desktopSearch(ramS, osS, processorS, hhdS, heightS, widthS, depthS, odS);
+                        if(productsHBoxes == null || productsHBoxes.size() == 0){
+                            Label errorLbl = new Label("no products found");
+                            innerVB.getChildren().addAll(errorLbl);
+                            return;
+                        }
+                        for(int i=0; i<productsHBoxes.size(); i++){
+                            innerVB.getChildren().addAll(productsHBoxes.get(i));
+                        }
+                        root.getChildren().addAll( outerVB, sc);
+                    }
+                });
+
+                printerSubmit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        root.getChildren().remove(0, root.getChildren().size());
+                        String ptS = "";
+                        String wrS = "";
+                        String ptechS = "";
+                        String mcS = "";
+                        String otS = "";
+
+                        RadioButton selectpt = (RadioButton) pt.getSelectedToggle();
+                        if(selectpt != null){
+                            ptS = selectpt.getText();
+                        }
+                        RadioButton selectedwr = (RadioButton) wr.getSelectedToggle();
+                        if(selectedwr != null){
+                            wrS = selectedwr.getText();
+                        }
+                        RadioButton selectedptech = (RadioButton) ptech.getSelectedToggle();
+                        if(selectedptech != null){
+                            ptechS = selectedptech.getText();
+                        }
+                        RadioButton selectedmc = (RadioButton) mc.getSelectedToggle();
+                        if(selectedmc != null){
+                            mcS = selectedmc.getText();
+                        }
+                        RadioButton selectot = (RadioButton) ot.getSelectedToggle();
+                        if(selectot != null){
+                            otS = selectot.getText();
+                        }
+
+
+                        innerVB.getChildren().remove(0,innerVB.getChildren().size());
+                        ArrayList<VBox> productsHBoxes = cc.printerSearch(ptS, wrS, ptechS, mcS, otS);
+                        if(productsHBoxes == null || productsHBoxes.size() == 0){
+                            Label errorLbl = new Label("no products found");
+                            innerVB.getChildren().addAll(errorLbl);
+                            return;
+                        }
+                        for(int i=0; i<productsHBoxes.size(); i++){
+                            innerVB.getChildren().addAll(productsHBoxes.get(i));
+                        }
+                        root.getChildren().addAll( outerVB, sc);
+                    }
+                });
 
 
                 root.getChildren().addAll(filtersVB);

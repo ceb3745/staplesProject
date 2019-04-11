@@ -1,7 +1,6 @@
 package Vendor;
 
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.Scanner;
 import MainPk.SQLExecutor;
 import java.sql.ResultSet;
@@ -13,6 +12,13 @@ import java.util.Calendar;
 public class Vendor_UI
 {
     private static SQLExecutor executor;
+
+    public Vendor_UI(SQLExecutor sqlExecutor)
+    {
+        super();
+        executor = sqlExecutor;
+        executor.startConnection("sa", "");
+    }
 
     public static void main(String[] args)
     {
@@ -41,15 +47,15 @@ public class Vendor_UI
                     break;
                 case 3:
                     //Should exit to the start UI
-                    exit = true;
+                    exit = true; //Just here for the repeating menu
                     break;
             }
         }
+        System.exit(0); //Kills the program after exiting
     }
 
     public static boolean make_reorder_request() { //This should be done automatically when a product is low
         Scanner sc = new Scanner(System.in);
-        executor = new SQLExecutor();
         ResultSet rs;
         int request_id = 0; //Retrieve the previous from the database and increase by 1
         int lastRequestID;
@@ -66,11 +72,12 @@ public class Vendor_UI
         StringBuilder sb;
 
         //get next reorder request number
-        String currentID = "select top 1 * from reorder_request by request_id desc";
+        String currentID = "select top 1 * from reorder_request order by request_id desc";
 
         rs = executor.executeQuery(currentID);
         try{
-            lastRequestID = rs.getInt(2);
+            rs.next();
+            lastRequestID = rs.getInt(1);
             lastRequestID++;
             request_id = lastRequestID;
         }catch (SQLException e) {
@@ -80,7 +87,7 @@ public class Vendor_UI
 
         //Interface with the vendor
         System.out.println("REORDER REQUEST\n-------------------");
-        System.out.println("Enter your vendor name:");
+        System.out.println("Enter your vendor ID:");
         vendor_id = sc.next();
 
         System.out.println("Enter the Store_ID to make the delivery to:");
@@ -94,89 +101,96 @@ public class Vendor_UI
 
         //Updating the reorder_request table
         sb = new StringBuilder();
-        sb.append("insert into reorder_request values("
+        sb.append("insert into reorder_request values('"
                 + request_id
-                + ", "
+                + "', '"
                 + date
-                + ", "
+                + "', '"
                 + time
-                + ", "
+                + "', '"
                 + vendor_id
-                + ", "
+                + "', '"
                 + store_id
-                + ", "
+                + "', '"
                 + "false"
-                + ");");
+                + "', '"
+                + upc
+                + "', '"
+                + quantity
+                + "');");
         executor.executeQuery(sb.toString());
 
 
         //Updating the reorder_item table
         sb = new StringBuilder();
-        sb.append("insert into reorder_item values("
+        sb.append("insert into reorder_item values('"
                 + upc
-                + ", "
+                + "', '"
                 + quantity
-                + ", "
+                + "', '"
                 + request_id
-                + ");");
+                + "');");
         executor.executeQuery(sb.toString());
         return true;
     }
     public static boolean fill_reorder_request()
     {
-        executor = new SQLExecutor();
         ResultSet rs;
+        ResultSet upcResult;
+        ResultSet quantityResultOld;
         String upc;
         int oldQuantity;
         int quantity;
-        String lastRequestID;
-        String[] request_id; //an array to handle all of the undelivered reorder_requests
         System.out.println("Retrieving reorder requests from the database.");
-        String grabRequests = "select * from reorder_request where delivered = 'false'";
-        rs = executor.executeQuery(grabRequests);
         try{
-            String currentID = "select top 1 * from reorder_request by request_id desc";
+            String currentID = "select * from reorder_request order by request_id desc";
             rs = executor.executeQuery(currentID);
-            lastRequestID = rs.getString(2);
-            request_id = Arrays.asList(rs.getArray(1)).toArray(new String[Integer.parseInt(lastRequestID)]);
+            rs.next();
 
-            int counter = Integer.parseInt(lastRequestID); //will count down until all of the unfilled requests are filled
-            while(counter > 0)
+            while(!rs.isAfterLast())
             {
-                //Filling each product one by one
-                String getUPC = "select upc from request_item where request_id = '" + request_id[counter] + "'";
-                rs = executor.executeQuery(getUPC);
-                rs.next();
-                upc = rs.getString(1);
+                //If the reorder request has a delivery status of TRUE, move on
+                if(rs.getString(6).equals("TRUE"))
+                {
+                    rs.next();
+                    continue;
+                }
+                System.out.println("Filling request"); //Fills any undelivered requests
 
-                //Grabbing the quantity from the product table to update
-                String grabOldQuantity = "select quantity from Product where upc = '" + upc + "'";
-                rs = executor.executeQuery(grabOldQuantity);
-                rs.next();
-                oldQuantity = Integer.parseInt(rs.getString(1));
+                //Filling each product one by one
+                String getUPC = "select * from reorder_item where request_id = '" + rs.getInt(1) + "'";
+                upcResult = executor.executeQuery(getUPC);
+                upcResult.next();
+                upc = upcResult.getString(1);
+
+                quantity = upcResult.getInt(2);
 
                 //Grabbing the quantity from the reorder_item table to add to the new quantity
-                String addQuantity = "select quantity from reorder_item where upc = '" + upc + "'";
-                rs = executor.executeQuery(addQuantity);
-                rs.next();
-                quantity = Integer.parseInt(rs.getString(1));
+                String addQuantity = "select * from product where upc = '" + upc + "'";
+                quantityResultOld = executor.executeQuery(addQuantity);
+                quantityResultOld.next();
+                oldQuantity = quantityResultOld.getInt(9);
                 quantity += oldQuantity;
 
                 //Updating the product table
                 String updateProduct = "update product set quantity = '" + quantity + "' where upc = '" + upc + "'";
-                rs = executor.executeQuery(updateProduct);
+                executor.executeQuery(updateProduct);
 
                 //Updating the reorder_request table
-                String updateReorderRequest = "update reorder_request set delivered = 'true' where request_id = '" + request_id[counter] + "'";
-                rs = executor.executeQuery(updateReorderRequest);
-
-                counter--;
+                String updateReorderRequest = "update reorder_request set delivered = 'true' where request_id = '" + rs.getInt(1) + "'";
+                executor.executeQuery(updateReorderRequest);
+                rs.next();
             }
         }catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
+        finished();
         return true;
+    }
+    public static void finished()
+    {
+        System.out.println("Finished filling requests.");
     }
 
 }

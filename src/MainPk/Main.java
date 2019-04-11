@@ -3,6 +3,7 @@ package MainPk;
 import Customer_Application.Cust_UI;
 import DBAdmin.DBAdminController;
 import POS_Application.POS_UI;
+import Vendor.Vendor_UI;
 
 import java.util.Scanner;
 
@@ -52,6 +53,8 @@ public class Main {
                 break;
             case 5:
                 // Run Vendor UI
+                Vendor_UI v = new Vendor_UI(executor);
+                v.main(null);
                 break;
             default:
                 System.out.print("Invalid choice, try again: ");

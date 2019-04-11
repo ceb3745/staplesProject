@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 /**
  * How to setup the database for this trigger:
  *
- * Create the trigger: CREATE TRIGGER my_trigger BEFORE UPDATE ON product FOR EACH ROW CALL "Trigger.ReorderTrigger"
+ * Create the trigger: CREATE TRIGGER my_trigger AFTER UPDATE ON product FOR EACH ROW CALL "Trigger.ReorderTrigger"
  */
 public class ReorderTrigger implements Trigger {
 
@@ -24,6 +24,8 @@ public class ReorderTrigger implements Trigger {
         Date date = new Date(System.currentTimeMillis());
         String time = timeFormat.format(date);
 
+        System.out.println(newRow[8]);
+
         Integer currQuantity = (Integer) newRow[8];
 
         if(currQuantity < 5) {
@@ -32,12 +34,13 @@ public class ReorderTrigger implements Trigger {
                     + newRow[0] + ")";
             System.out.println(vendorQuery);
 
-            Integer vendorID =
-                    (Integer) sqlStatement.executeQuery(vendorQuery)
-                            .getInt(1);
+            ResultSet result = sqlStatement.executeQuery(vendorQuery);
+            result.first();
 
-            sqlStatement.execute("INSERT INTO reorder_request VALUES(CURRENT_DATE, " + time + ", " +
-                    vendorID + ", " + newRow[4] + ", FALSE, 5");
+            Integer vendorID = (Integer) result.getInt(1);
+
+            sqlStatement.execute("INSERT INTO reorder_request VALUES(LAST_INSERT_ID(), CURRENT_DATE, '" + time + "', " +
+                    vendorID + ", " + newRow[4] + ", FALSE, " + newRow[0] + ", 5)");
         }
     }
 

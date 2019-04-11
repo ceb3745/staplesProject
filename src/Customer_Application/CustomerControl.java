@@ -81,6 +81,77 @@ public class CustomerControl {
     //50, 100, 150
     int packQuantity = -1;
 
+    //heightF, widthF, depthF, raVB, cfVB
+    public ArrayList<VBox> furnitureSearch(String height, String width, String depth, String ra, String cf){
+        sb = new StringBuilder();
+        sb.append("select product.UPC, Product_name from furniture natural join product");
+        boolean heightB = (!height.equals(""));
+        boolean widthB = (!width.equals(""));
+        boolean depthB = (!depth.equals(""));
+        boolean raB = (!ra.equals(""));
+        boolean cfB = (!cf.equals(""));
+        if(heightB || widthB || depthB || raB || cfB){
+            sb.append(" where ");
+            if(!height.equals("")){
+                sb.append("height<'" + height + "' ");
+            }
+            if(!width.equals("")){
+                if(heightB){sb.append(" AND ");}
+                sb.append("width<'" + width + "' ");
+            }
+            if(!depth.equals("")){
+                if(heightB || widthB){sb.append(" AND ");}
+                sb.append("depth<'" + depth + "' ");
+            }
+            if(!ra.equals("")){
+                if(heightB || widthB || depthB){sb.append(" AND ");}
+                sb.append("requires_assembly='" + ra + "' ");
+            }
+            if(!cf.equals("")){
+                if(heightB || widthB || depthB || raB){sb.append(" AND ");}
+                sb.append("color_family='" + cf + "' ");
+            }
+        }
+        sb.append(";");
+        String query = sb.toString();
+
+        ResultSet rs;
+        ArrayList<VBox> arr = new ArrayList<>();
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            if(!rs.first()){
+                return arr;
+            }
+            while(!rs.isAfterLast()){
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
+    }
+
     public ArrayList<VBox> laptopSearch(String ram, String os, String processor, String hhd, String ss, String ts, String dt, String audio){
         sb = new StringBuilder();
         sb.append("select product.UPC, Product_name from laptop natural join computer natural join product");
@@ -321,34 +392,95 @@ public class CustomerControl {
         return arr;
     }
 
-    public ArrayList<VBox> paperSearch(String typeOfPrinter, String wirelessReady, String printTechnology, String mobileCapability, String outputType){
+    //itcVB, ittVB, psVB, ytVB
+    public ArrayList<VBox> inktonerSearch(String color, String technology, String packSize, String yieldType){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from printer natural join product");
-        boolean typeOfPrinterB = (!typeOfPrinter.equals(""));
-        boolean wirelessReadyB = (!wirelessReady.equals(""));
-        boolean printTechnologyB = (!printTechnology.equals(""));
-        boolean mobileCapabilityB = (!mobileCapability.equals(""));
-        boolean outputTypeB = (!outputType.equals(""));
-        if(typeOfPrinterB || wirelessReadyB || printTechnologyB || mobileCapabilityB || outputTypeB){
+        sb.append("select product.UPC, Product_name from ink_toner natural join product");
+        boolean typeOfPrinterB = (!color.equals(""));
+        boolean wirelessReadyB = (!technology.equals(""));
+        boolean printTechnologyB = (!packSize.equals(""));
+        boolean mobileCapabilityB = (!yieldType.equals(""));
+        if(typeOfPrinterB || wirelessReadyB || printTechnologyB || mobileCapabilityB){
             sb.append(" where ");
-            if(!typeOfPrinter.equals("")){
-                sb.append("type_of_printer='" + typeOfPrinter + "' ");
+            if(!color.equals("")){
+                sb.append("color='" + color + "' ");
             }
-            if(!wirelessReady.equals("")){
+            if(!technology.equals("")){
                 if(typeOfPrinterB){sb.append(" AND ");}
-                sb.append("wireless_ready='" + wirelessReady + "' ");
+                sb.append("supply_type='" + technology + "' ");
             }
-            if(!printTechnology.equals("")){
+            if(!packSize.equals("")){
                 if(wirelessReadyB || typeOfPrinterB){sb.append(" AND ");}
-                sb.append("print_technology='" + printTechnology + "' ");
+                sb.append("pack_size='" + packSize + "' ");
             }
-            if(!mobileCapability.equals("")){
+            if(!yieldType.equals("")){
                 if(printTechnologyB || typeOfPrinterB || wirelessReadyB){sb.append(" AND ");}
-                sb.append("mobile_capability='" + mobileCapability + "' ");
+                sb.append("yield_type='" + yieldType + "' ");
             }
-            if(!outputType.equals("")){
-                if(printTechnologyB || typeOfPrinterB || wirelessReadyB || mobileCapabilityB){sb.append(" AND ");}
-                sb.append("output_type='" + outputType + "' ");
+        }
+        sb.append(";");
+        String query = sb.toString();
+
+        ResultSet rs;
+        ArrayList<VBox> arr = new ArrayList<>();
+        try{
+            String productName;
+            String UPC;
+            String details;
+
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            if(!rs.first()){
+                return arr;
+            }
+            while(!rs.isAfterLast()){
+                productName = rs.getString(2);
+                UPC = rs.getString(1);
+                details = getDetails(UPC);
+                VBox innerVB = new VBox();
+                Label productNameLabel = new Label(productName);
+                productNameLabel.setStyle("-fx-font-size: 20px;");
+                Label upcLabel = new Label(UPC);
+                Label detailsLabel = new Label(details);
+                detailsLabel.setStyle("-fx-padding: 10px;");
+                upcLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 12px; -fx-padding: 0px 0px 0px 10px;");
+                innerVB.getChildren().addAll(productNameLabel, detailsLabel, upcLabel);
+                innerVB.setStyle("-fx-background-color: lightgray; -fx-border-width: 3px; -fx-padding: 10px 0px 10px 0px;");
+                rs.next();
+
+                arr.add(innerVB);
+
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return arr;
+    }
+
+    public ArrayList<VBox> paperSearch(String sheetDimension, String paperWeight, String paperColor, String packQuantity){
+        sb = new StringBuilder();
+        sb.append("select product.UPC, Product_name from paper natural join product");
+        boolean typeOfPrinterB = (!sheetDimension.equals(""));
+        boolean wirelessReadyB = (!paperWeight.equals(""));
+        boolean printTechnologyB = (!paperColor.equals(""));
+        boolean mobileCapabilityB = (!packSize.equals(""));
+        if(typeOfPrinterB || wirelessReadyB || printTechnologyB || mobileCapabilityB){
+            sb.append(" where ");
+            if(!sheetDimension.equals("")){
+                sb.append("sheet_dimension='" + sheetDimension + "' ");
+            }
+            if(!paperWeight.equals("")){
+                if(typeOfPrinterB){sb.append(" AND ");}
+                sb.append("paper_weight='" + paperWeight + "' ");
+            }
+            if(!paperColor.equals("")){
+                if(wirelessReadyB || typeOfPrinterB){sb.append(" AND ");}
+                sb.append("paper_color='" + paperColor + "' ");
+            }
+            if(!packSize.equals("")){
+                if(printTechnologyB || typeOfPrinterB || wirelessReadyB){sb.append(" AND ");}
+                sb.append("pack_quantity='" + packSize + "' ");
             }
         }
         sb.append(";");

@@ -603,6 +603,136 @@ public class Cust_UI extends Application implements Runnable{
                     }
                 });
 
+                //heightF, widthF, depthF, raVB, cfVB
+                furnitureSubmit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        root.getChildren().remove(0, root.getChildren().size());
+                        String heightFS = "";
+                        String widthFS = "";
+                        String depthFS = "";
+                        String raS = "";
+                        String cfS = "";
+
+                        TextField selectedheightF = (TextField)heightF.getChildren().get(1);
+                        if(selectedheightF != null){
+                            heightFS = selectedheightF.getText();
+                        }
+                        TextField selectedwidthF = (TextField)widthF.getChildren().get(1);
+                        if(selectedwidthF != null){
+                            widthFS = selectedwidthF.getText();
+                        }
+                        TextField selecteddepthF = (TextField)depthF.getChildren().get(1);
+                        if(selecteddepthF != null){
+                            depthFS = selecteddepthF.getText();
+                        }
+                        RadioButton selectedra = (RadioButton) ra.getSelectedToggle();
+                        if(selectedra != null){
+                            raS = selectedra.getText();
+                        }
+                        RadioButton selectedcf = (RadioButton) cf.getSelectedToggle();
+                        if(selectedcf != null){
+                            cfS = selectedcf.getText();
+                        }
+
+                        innerVB.getChildren().remove(0,innerVB.getChildren().size());
+                        ArrayList<VBox> productsHBoxes = cc.furnitureSearch(heightFS, widthFS, depthFS, raS, cfS);
+                        if(productsHBoxes == null || productsHBoxes.size() == 0){
+                            Label errorLbl = new Label("no products found");
+                            innerVB.getChildren().addAll(errorLbl);
+                            return;
+                        }
+                        for(int i=0; i<productsHBoxes.size(); i++){
+                            innerVB.getChildren().addAll(productsHBoxes.get(i));
+                        }
+                        root.getChildren().addAll( outerVB, sc);
+                    }
+                });
+
+                //sdVB, pwVB, pcVB, pqVB
+                paperSubmit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        root.getChildren().remove(0, root.getChildren().size());
+                        String sdS = "";
+                        String pwS = "";
+                        String pcS = "";
+                        String pqS = "";
+
+                        RadioButton selectedsd = (RadioButton) sd.getSelectedToggle();
+                        if(selectedsd != null){
+                            sdS = selectedsd.getText();
+                        }
+                        RadioButton selectedpw = (RadioButton) pw.getSelectedToggle();
+                        if(selectedpw != null){
+                            pwS = selectedpw.getText();
+                        }
+                        RadioButton selectedpc = (RadioButton) pc.getSelectedToggle();
+                        if(selectedpc != null){
+                            pcS = selectedpc.getText();
+                        }
+                        RadioButton selectedpq = (RadioButton) pq.getSelectedToggle();
+                        if(selectedpq != null){
+                            pqS = selectedpq.getText();
+                        }
+
+                        innerVB.getChildren().remove(0,innerVB.getChildren().size());
+                        ArrayList<VBox> productsHBoxes = cc.paperSearch(sdS, pwS, pcS, pqS);
+                        if(productsHBoxes == null || productsHBoxes.size() == 0){
+                            Label errorLbl = new Label("no products found");
+                            innerVB.getChildren().addAll(errorLbl);
+                            return;
+                        }
+                        for(int i=0; i<productsHBoxes.size(); i++){
+                            innerVB.getChildren().addAll(productsHBoxes.get(i));
+                        }
+                        root.getChildren().addAll( outerVB, sc);
+                    }
+                });
+
+                //itcVB, ittVB, psVB, ytVB
+                inktonerSubmit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        root.getChildren().remove(0, root.getChildren().size());
+                        String sdS = "";
+                        String pwS = "";
+                        String pcS = "";
+                        String pqS = "";
+
+                        RadioButton selectedsd = (RadioButton) itc.getSelectedToggle();
+                        if(selectedsd != null){
+                            sdS = selectedsd.getText();
+                        }
+                        RadioButton selectedpw = (RadioButton) itt.getSelectedToggle();
+                        if(selectedpw != null){
+                            pwS = selectedpw.getText();
+                        }
+                        RadioButton selectedpc = (RadioButton) ps.getSelectedToggle();
+                        if(selectedpc != null){
+                            pcS = selectedpc.getText();
+                        }
+                        RadioButton selectedpq = (RadioButton) yt.getSelectedToggle();
+                        if(selectedpq != null){
+                            pqS = selectedpq.getText();
+                        }
+
+                        innerVB.getChildren().remove(0,innerVB.getChildren().size());
+                        ArrayList<VBox> productsHBoxes = cc.inktonerSearch(sdS, pwS, pcS, pqS);
+                        if(productsHBoxes == null || productsHBoxes.size() == 0){
+                            Label errorLbl = new Label("no products found");
+                            innerVB.getChildren().addAll(errorLbl);
+                            return;
+                        }
+                        for(int i=0; i<productsHBoxes.size(); i++){
+                            innerVB.getChildren().addAll(productsHBoxes.get(i));
+                        }
+                        root.getChildren().addAll( outerVB, sc);
+                    }
+                });
+
+
+
                 //laptopSubmit
                 laptopSubmit.setOnAction(new EventHandler<ActionEvent>() {
                     @Override

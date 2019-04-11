@@ -4,6 +4,7 @@ import Customer_Application.Cust_UI;
 import DBAdmin.DBAdminController;
 import POS_Application.POS_UI;
 import Vendor.Vendor_UI;
+import StoreManager.StoreManagerController;
 
 import java.util.Scanner;
 
@@ -50,6 +51,8 @@ public class Main {
                 break;
             case 4:
                 // Run Store Manager UI
+                StoreManagerController SMC = new StoreManagerController(executor);
+                SMC.startUp();
                 break;
             case 5:
                 // Run Vendor UI

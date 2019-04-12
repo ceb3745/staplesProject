@@ -39,7 +39,8 @@ public class ReorderTrigger implements Trigger {
 
             Integer vendorID = (Integer) result.getInt(1);
 
-            sqlStatement.execute("INSERT INTO reorder_request VALUES(LAST_INSERT_ID(), CURRENT_DATE, '" + time + "', " +
+            sqlStatement.execute("INSERT INTO reorder_request(DATE, TIME, VENDOR_ID, STORE_ID, DELIVERED, UPC," +
+                    " QUANTITY) VALUES(CURRENT_DATE, '" + time + "', " +
                     vendorID + ", " + newRow[4] + ", FALSE, " + newRow[0] + ", 5)");
         }
     }

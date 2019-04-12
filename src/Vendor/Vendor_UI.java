@@ -158,12 +158,12 @@ public class Vendor_UI
                 System.out.println("Filling request"); //Fills any undelivered requests
 
                 //Filling each product one by one
-                String getUPC = "select * from reorder_item where request_id = '" + rs.getInt(1) + "'";
+                String getUPC = "select * from reorder_request where request_id = '" + rs.getInt(1) + "'";
                 upcResult = executor.executeQuery(getUPC);
                 upcResult.next();
-                upc = upcResult.getString(1);
+                upc = upcResult.getString(7);
 
-                quantity = upcResult.getInt(2);
+                quantity = upcResult.getInt(8);
 
                 //Grabbing the quantity from the reorder_item table to add to the new quantity
                 String addQuantity = "select * from product where upc = '" + upc + "'";

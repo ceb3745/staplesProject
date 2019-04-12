@@ -30,17 +30,34 @@ public class StoreManagerView {
                 done = true;
                 return -1;
             }else{
-                number = Integer.parseInt(input);
-                try{
-                  ResultSet result = mySMC.getResult("select store_id from store where store_id = " + number);
-                  if(!result.first()){
-                      System.out.println("This store is not in the database, try another number or type \"Quir\" to exit");
-                  }else{
-                        return number;
+                try {
+                    number = Integer.parseInt(input);
+                    try{
+                        ResultSet result = mySMC.getResult("select store_id from store where store_id = " + number);
+                        if(!result.first()){
+                            System.out.println("This store is not in the database, try another number or type \"Quir\" to exit");
+                        }else{
+                            return number;
+                        }
+                    }catch (SQLException e){
+                        e.printStackTrace();
                     }
-                }catch (SQLException e){
-                    e.printStackTrace();
+                } catch (NumberFormatException | NullPointerException nfe) {
+                    System.out.println("Thats not a store number, please try again.");
                 }
+
+
+//                number = Integer.parseInt(input);
+//                try{
+//                  ResultSet result = mySMC.getResult("select store_id from store where store_id = " + number);
+//                  if(!result.first()){
+//                      System.out.println("This store is not in the database, try another number or type \"Quir\" to exit");
+//                  }else{
+//                        return number;
+//                    }
+//                }catch (SQLException e){
+//                    e.printStackTrace();
+//                }
 
             }
         }
@@ -165,7 +182,8 @@ public class StoreManagerView {
             System.out.println("Top selling product by count:");
             fancyPrintResults("select product.product_name, product.upc, sum(sale_quantity) as total from sale natural join product natural join saleitem where sale.store_id = "+storeNumber+" group by product.upc order by total desc limit 1");
             System.out.println("Top selling product by count by department: ");
-            fancyPrintResults("select product.product_name, product.upc, sum(sale_quantity) as total from sale natural join product natural join saleitem natural join sub_department natural join department where department.department_id = 1 and sale.store_id = "+storeNumber+"group by product.upc order by total desc limit 1");
+            //fancyPrintResults("select product.product_name, product.upc, sum(sale_quantity) as total from sale natural join product natural join saleitem natural join sub_department natural join department where department.department_id = 1 and sale.store_id = "+storeNumber+"group by product.upc order by total desc limit 1");
+            fancyPrintResults("select S.sdid, sub_dept_name, upc, total from S natural join (select S.sdid, max(total) as max_total from S group by S.sdid) natural join sub_department where total = max_total and S.sdid=sd_id");
 
             System.out.println("For more detailed inquiries, please contact your data base administrator. ");
 

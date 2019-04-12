@@ -84,7 +84,7 @@ public class CustomerControl {
     //heightF, widthF, depthF, raVB, cfVB
     public ArrayList<VBox> furnitureSearch(String height, String width, String depth, String ra, String cf){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from furniture natural join product");
+        sb.append("select product.UPC, Product_name, price from furniture natural join product");
         boolean heightB = (!height.equals(""));
         boolean widthB = (!width.equals(""));
         boolean depthB = (!depth.equals(""));
@@ -121,6 +121,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -130,9 +131,10 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(3);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -154,7 +156,7 @@ public class CustomerControl {
 
     public ArrayList<VBox> laptopSearch(String ram, String os, String processor, String hhd, String ss, String ts, String dt, String audio){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from laptop natural join computer natural join product");
+        sb.append("select product.UPC, Product_name, price from laptop natural join computer natural join product");
         boolean ramB = (!ram.equals(""));
         boolean osB = (!os.equals(""));
         boolean processorB = (!processor.equals(""));
@@ -206,6 +208,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -215,9 +218,10 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(3);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -239,7 +243,7 @@ public class CustomerControl {
 
     public ArrayList<VBox> desktopSearch(String ram, String os, String processor, String hhd, String height, String width, String depth, String od){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from desktop natural join computer natural join product");
+        sb.append("select product.UPC, Product_name, price from desktop natural join computer natural join product");
         boolean ramB = (!ram.equals(""));
         boolean osB = (!os.equals(""));
         boolean processorB = (!processor.equals(""));
@@ -291,6 +295,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -300,9 +305,10 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(3);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -324,7 +330,7 @@ public class CustomerControl {
 
     public ArrayList<VBox> printerSearch(String typeOfPrinter, String wirelessReady, String printTechnology, String mobileCapability, String outputType){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from printer natural join product");
+        sb.append("select product.UPC, Product_name, price from printer natural join product");
         boolean typeOfPrinterB = (!typeOfPrinter.equals(""));
         boolean wirelessReadyB = (!wirelessReady.equals(""));
         boolean printTechnologyB = (!printTechnology.equals(""));
@@ -361,6 +367,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -370,9 +377,10 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(3);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -395,7 +403,7 @@ public class CustomerControl {
     //itcVB, ittVB, psVB, ytVB
     public ArrayList<VBox> inktonerSearch(String color, String technology, String packSize, String yieldType){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from ink_toner natural join product");
+        sb.append("select product.UPC, Product_name, price from ink_toner natural join product");
         boolean typeOfPrinterB = (!color.equals(""));
         boolean wirelessReadyB = (!technology.equals(""));
         boolean printTechnologyB = (!packSize.equals(""));
@@ -427,6 +435,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -436,9 +445,10 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(3);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -460,7 +470,7 @@ public class CustomerControl {
 
     public ArrayList<VBox> paperSearch(String sheetDimension, String paperWeight, String paperColor, String packQuantity){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from paper natural join product");
+        sb.append("select product.UPC, Product_name, price from paper natural join product");
         boolean typeOfPrinterB = (!sheetDimension.equals(""));
         boolean wirelessReadyB = (!paperWeight.equals(""));
         boolean printTechnologyB = (!paperColor.equals(""));
@@ -492,6 +502,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -501,9 +512,11 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(3);
+
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price );
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -525,7 +538,7 @@ public class CustomerControl {
 
     public ArrayList<VBox> computerSearch(String ram, String os, String processor, String hhd){
         sb = new StringBuilder();
-        sb.append("select product.UPC, Product_name from computer natural join product");
+        sb.append("select product.UPC, Product_name, price from computer natural join product");
         boolean ramB = (!ram.equals(""));
         boolean osB = (!os.equals(""));
         boolean processorB = (!processor.equals(""));
@@ -557,6 +570,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -566,9 +580,10 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(3);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -594,10 +609,10 @@ public class CustomerControl {
     }
 
     public ArrayList<VBox> getTop5Products(){
-        String query = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
-                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+        String query = "with storeSalesProduct (product_name,UPC,quantity, storeID, price) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id, product.price from\n" +
                 "product natural join saleitem natural join sale)\n" +
-                "select UPC,Product_name, storeID,sum(quantity) as total_quantity from storeSalesProduct group by UPC " +
+                "select UPC,Product_name, storeID,sum(quantity), price as total_quantity from storeSalesProduct group by UPC " +
                 "order by total_quantity desc limit 5";
         ResultSet rs;
         ArrayList<VBox> arr = new ArrayList<>();
@@ -605,15 +620,17 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
             for(int i=0; i<5; i++){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(5);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);
@@ -683,7 +700,7 @@ public class CustomerControl {
         String query = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
                 "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
                 "product natural join saleitem natural join sale)\n" +
-                "select UPC,Product_name, storeID,sum(quantity) as total_quantity from storeSalesProduct " +
+                "select UPC,Product_name, storeID,sum(quantity), price as total_quantity from storeSalesProduct " +
                 "where product_name like " + "\'%" + searchTermNew + "%\'" +
                 "group by UPC order by total_quantity desc limit 20;";
 
@@ -693,6 +710,7 @@ public class CustomerControl {
             String productName;
             String UPC;
             String details;
+            Float price;
 
             rs = sqlExecutor.executeQuery(query);
             rs.next();
@@ -703,9 +721,10 @@ public class CustomerControl {
             while(!rs.isAfterLast()){
                 productName = rs.getString(2);
                 UPC = rs.getString(1);
+                price = rs.getFloat(4);
                 details = getDetails(UPC);
                 VBox innerVB = new VBox();
-                Label productNameLabel = new Label(productName);
+                Label productNameLabel = new Label(productName + " " + price);
                 productNameLabel.setStyle("-fx-font-size: 20px;");
                 Label upcLabel = new Label(UPC);
                 Label detailsLabel = new Label(details);

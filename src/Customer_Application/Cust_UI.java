@@ -59,7 +59,7 @@ public class Cust_UI extends Application implements Runnable{
         }
         outerVB.getChildren().addAll(searchBar, innerVB);
         root.getChildren().addAll( outerVB, sc);
-        Scene scene = new Scene(root, 700, 500);
+        Scene scene = new Scene(root, 700, 900);
 
         submit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -592,6 +592,7 @@ public class Cust_UI extends Application implements Runnable{
                         if(productsHBoxes == null || productsHBoxes.size() == 0){
                             Label errorLbl = new Label("no products found");
                             innerVB.getChildren().addAll(errorLbl);
+                            root.getChildren().addAll( outerVB, sc);
                             return;
                         }
                         for(int i=0; i<productsHBoxes.size(); i++){
@@ -639,6 +640,7 @@ public class Cust_UI extends Application implements Runnable{
                         if(productsHBoxes == null || productsHBoxes.size() == 0){
                             Label errorLbl = new Label("no products found");
                             innerVB.getChildren().addAll(errorLbl);
+                            root.getChildren().addAll( outerVB, sc);
                             return;
                         }
                         for(int i=0; i<productsHBoxes.size(); i++){
@@ -680,6 +682,7 @@ public class Cust_UI extends Application implements Runnable{
                         if(productsHBoxes == null || productsHBoxes.size() == 0){
                             Label errorLbl = new Label("no products found");
                             innerVB.getChildren().addAll(errorLbl);
+                            root.getChildren().addAll( outerVB, sc);
                             return;
                         }
                         for(int i=0; i<productsHBoxes.size(); i++){
@@ -721,6 +724,7 @@ public class Cust_UI extends Application implements Runnable{
                         if(productsHBoxes == null || productsHBoxes.size() == 0){
                             Label errorLbl = new Label("no products found");
                             innerVB.getChildren().addAll(errorLbl);
+                            root.getChildren().addAll( outerVB, sc);
                             return;
                         }
                         for(int i=0; i<productsHBoxes.size(); i++){
@@ -784,6 +788,7 @@ public class Cust_UI extends Application implements Runnable{
                         if(productsHBoxes == null || productsHBoxes.size() == 0){
                             Label errorLbl = new Label("no products found");
                             innerVB.getChildren().addAll(errorLbl);
+                            root.getChildren().addAll( outerVB, sc);
                             return;
                         }
                         for(int i=0; i<productsHBoxes.size(); i++){
@@ -845,6 +850,7 @@ public class Cust_UI extends Application implements Runnable{
                         if(productsHBoxes == null || productsHBoxes.size() == 0){
                             Label errorLbl = new Label("no products found");
                             innerVB.getChildren().addAll(errorLbl);
+                            root.getChildren().addAll( outerVB, sc);
                             return;
                         }
                         for(int i=0; i<productsHBoxes.size(); i++){
@@ -891,6 +897,7 @@ public class Cust_UI extends Application implements Runnable{
                         if(productsHBoxes == null || productsHBoxes.size() == 0){
                             Label errorLbl = new Label("no products found");
                             innerVB.getChildren().addAll(errorLbl);
+                            root.getChildren().addAll( outerVB, sc);
                             return;
                         }
                         for(int i=0; i<productsHBoxes.size(); i++){

@@ -8,9 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -166,6 +164,48 @@ public class POS_UI extends Application implements Runnable {
                     Button yes = new Button("Yes");
 
                     Button no = new Button("No");
+
+
+                    Button yes2 = new Button("Yes");
+
+                    Button no2 = new Button("No");
+
+                    //fn, ln, phone #, member_id, member_type, email
+                    Label fnLBL = new Label("First Name: ");
+                    TextField fn = new TextField();
+                    HBox fnHB = new HBox();
+                    fnHB.getChildren().addAll(fnLBL, fn);
+
+                    Label lnLBL = new Label("Last Name: ");
+                    TextField ln = new TextField();
+                    HBox lnHB = new HBox();
+                    lnHB.getChildren().addAll(lnLBL, ln);
+
+                    Label pnLBL = new Label("Phone Number ex. (XXX)XXX-XXXX : ");
+                    TextField pn = new TextField();
+                    HBox pnHB = new HBox();
+                    pnHB.getChildren().addAll(pnLBL, pn);
+
+                    ToggleGroup mt = new ToggleGroup();
+                    Label mtLBL = new Label("Member Type: ");
+                    RadioButton teacher = new RadioButton("Teacher");
+                    RadioButton regular = new RadioButton("Regular");
+                    teacher.setToggleGroup(mt);
+                    regular.setToggleGroup(mt);
+                    VBox mtVB = new VBox();
+                    mtVB.getChildren().addAll(mtLBL, teacher, regular);
+
+                    Label emailLBL = new Label("Email ex. me@gmail.com : ");
+                    TextField email = new TextField();
+                    HBox emailHB = new HBox();
+                    emailHB.getChildren().addAll(emailLBL, email);
+
+                    Button memberSubmit = new Button("Submit");
+
+
+                    VBox newMember = new VBox();
+                    newMember.getChildren().addAll(fnHB, lnHB, pnHB, mtVB, emailHB, memberSubmit);
+
                     VBox vbox = new VBox();
                     vbox.getChildren().addAll(lb, yes, no);
                     bp.setCenter(vbox);
@@ -184,16 +224,80 @@ public class POS_UI extends Application implements Runnable {
                     no.setOnAction(new EventHandler<ActionEvent>() {
                         @Override
                         public void handle(ActionEvent event) {
+                            vbox.getChildren().removeAll(yes, no);
+                            lb.setText("Do You Want to Become a Member?");
+
+                            vbox.getChildren().addAll(yes2, no2);
+                        }
+                    });
+
+                    no2.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            vbox.getChildren().removeAll(yes, no);
                             member_id = -1;
                             primaryStage.hide();
                             start(new Stage());
                         }
                     });
 
+                    yes2.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            vbox.getChildren().removeAll(yes2, no2);
+                            lb.setText("Please enter your member info: ");
+                            vbox.getChildren().addAll(newMember);
+                        }
+                    });
+
+                    memberSubmit.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            RadioButton rmt = (RadioButton) mt.getSelectedToggle();
+                            if(fn.getText().equals("")){
+                                Label errorField = new Label("Bad First Name Entry.");
+                                errorField.setStyle("-fx-text-fill: red; -fx-pref-height: 20px");
+
+                                vbox.getChildren().add(0, errorField);
+                            }
+                            else if(ln.getText().equals("")){
+                                Label errorField = new Label("Bad Last Name Entry.");
+                                errorField.setStyle("-fx-text-fill: red; -fx-pref-height: 20px");
+
+                                vbox.getChildren().add(0, errorField);
+                            }
+                            else if(pn.getText().equals("")){
+                                Label errorField = new Label("Bad Phone Number Entry.");
+                                errorField.setStyle("-fx-text-fill: red; -fx-pref-height: 20px");
+
+                                vbox.getChildren().add(0, errorField);
+                            }
+                            else if(rmt == null ){
+                                Label errorField = new Label("Please select a member type.");
+                                errorField.setStyle("-fx-text-fill: red; -fx-pref-height: 20px");
+
+                                vbox.getChildren().add(0, errorField);
+                            }
+                            else if(email.getText().equals("")){
+                                Label errorField = new Label("Bad Email Entry.");
+                                errorField.setStyle("-fx-text-fill: red; -fx-pref-height: 20px");
+
+                                vbox.getChildren().add(0, errorField);
+                            }else{
+                                vbox.getChildren().remove(0);
+                                member_id = cc.becomeAMember(fn.getText(), ln.getText(), pn.getText(), rmt.getText(), email.getText());
+                                vbox.getChildren().removeAll(newMember);
+                                primaryStage.hide();
+                                start(new Stage());
+                            }
+
+                        }
+                    });
+
                     submit.setOnAction(new EventHandler<ActionEvent>() {
                         @Override
                         public void handle(ActionEvent event) {
-                            if (!cc.findMember(Integer.parseInt(input.getText()))) {
+                            if (input.getText().equals("") || !cc.findMember(Integer.parseInt(input.getText()))) {
                                 Label error = new Label("Please enter a VALID member ID");
                                 error.setStyle("-fx-text-fill: red; -fx-pref-height: 20px");
                                 vbox.getChildren().add(1, error);
@@ -257,11 +361,11 @@ public class POS_UI extends Application implements Runnable {
                         submit.setOnAction(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
-                                if (cc.confirmProduct(textField.getText())) {
+                                if (!textField.getText().equals("") && cc.confirmProduct(textField.getText())) {
                                     myCart.addItem(cc.getProduct(textField.getText()));
-                                    System.out.println("here");
                                     primaryStage.hide();
                                     start(new Stage());
+                                    return;
 
                                 }
                                 Label error = new Label("product number INVALID please enter new one");

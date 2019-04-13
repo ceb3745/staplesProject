@@ -21,4 +21,9 @@ public class Product {
 
     public float getPrice(){return this.price;}
 
+    public void updateQuantity(int quan, float price){
+        this.quantity += quan;
+        this.price += (quan*price);
+    }
+
 }

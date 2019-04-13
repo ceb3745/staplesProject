@@ -12,6 +12,12 @@ public class Cart {
     }
 
     public void addItem(Product prod){
+        for(int i=0; i<products.size(); i++){
+            if(products.get(i).getUPC().equals(prod.getUPC())){
+                products.get(i).updateQuantity(prod.getQuantity(), prod.getPrice());
+                return;
+            }
+        }
         products.add(prod);
     }
 

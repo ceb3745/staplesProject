@@ -42,9 +42,25 @@ public class ClientControl {
      * @param email
      * @return
      */
-    public ResultSet becomeAMember(String fn, String ln, String phone_number, String member_type, String email){
+    public int becomeAMember(String fn, String ln, String phone_number, String member_type, String email){
         sb = new StringBuilder();
+        int lastSaleIndex = 0;
+
         ResultSet rs;
+        //get next sale number
+        String init = "select top 1 * from sale order by sale_id desc";
+
+        rs = sqlExecutor.executeQuery(init);
+        try{
+            rs.next();
+            lastSaleIndex = rs.getInt(2);
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        lastSaleIndex++;
+
+        curr_sale_id = lastSaleIndex;
+
         sb.append("insert into member values('"
                 +fn
                 + "', '"
@@ -52,12 +68,14 @@ public class ClientControl {
                 + "', '"
                 + phone_number
                 + "', '"
+                + lastSaleIndex
+                + "', '"
                 + member_type
                 + "', '"
                 + email
                 + "');");
         sqlExecutor.executeQuery(sb.toString());
-        return null;
+        return lastSaleIndex;
     }
 
     //Store_ID,Sale_ID,Member_ID,Payment_Type,Card_Number,Time,Month,Day,Year
@@ -138,6 +156,9 @@ public class ClientControl {
         try{
             rs = sqlExecutor.executeQuery(query);
             rs.next();
+            if(!rs.first()){
+                return false;
+            }
             if(rs.getInt(1) != store_num){
                 return false;
             }
@@ -154,7 +175,7 @@ public class ClientControl {
         try{
             rs = sqlExecutor.executeQuery(query);
             rs.next();
-            if(rs.getInt(4) != member_id){
+            if(!rs.first()){
                 return false;
             }
         }catch (SQLException e) {
@@ -169,7 +190,7 @@ public class ClientControl {
         try{
             rs = sqlExecutor.executeQuery(query);
             rs.next();
-            if(!rs.getString(1).equals(upc)){
+            if(!rs.first()){
                 return false;
             }
         }catch (SQLException e) {

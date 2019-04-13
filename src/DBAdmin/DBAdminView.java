@@ -63,9 +63,9 @@ public class DBAdminView {
                     System.out.println("Sending input \n\"" + input + "\"\nto the database...");
                     try {
                         ResultSet result = myDBC.getResult(input);
-                        if (result != null){
+                        if (result != null && result.first()){
                             //put the below line in the else above
-                            result.first();
+                            //result.first();
                             ResultSetMetaData rsmd = result.getMetaData();
                             cols = rsmd.getColumnCount();
 
@@ -75,7 +75,11 @@ public class DBAdminView {
                                 maxW = rsmd.getColumnName(c).length();
                                 result.first();
                                 while(!result.isAfterLast()){
-                                    thisW = result.getObject(c).toString().length();
+                                    if(result.getObject(c) != null) {
+                                        thisW = result.getObject(c).toString().length();
+
+                                    }
+                                    //thisW = result.getObject(c).toString().length();
                                     //System.out.println(result.getObject(c).toString());
                                     if(thisW > maxW){
                                         maxW = thisW;
@@ -102,7 +106,12 @@ public class DBAdminView {
                                     //System.out.print(" | " + result.getObject(i).toString() + " | ");
                                     //System.out.println(result.getObject(i).toString());
                                     format = "|%-"+(2+ colWidths.get(i-1))+"s|";
-                                    row+=String.format(format,result.getObject(i).toString());
+                                    if(result.getObject(i)!=null){
+                                        row+=String.format(format,result.getObject(i).toString());
+                                    }else{
+                                        row+=String.format(format,"null");
+                                    }
+                                    //row+=String.format(format,result.getObject(i).toString());
                                 }
                                 System.out.print(row);
                                 System.out.println();

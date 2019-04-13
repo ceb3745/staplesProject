@@ -60,10 +60,13 @@ public class Cart {
         return products.get(index);
     }
 
-    public float getTotal(){
+    public float getTotal(boolean teacher){
         float total = 0;
         for(int i=0; i<products.size(); i++){
             total += products.get(i).getPrice();
+        }
+        if(teacher){
+            total = (float)(total*(0.9));
         }
         return total;
     }

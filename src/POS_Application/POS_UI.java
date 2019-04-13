@@ -56,7 +56,7 @@ public class POS_UI extends Application implements Runnable {
             tophb.setAlignment(Pos.TOP_LEFT);
             tophb.getChildren().addAll(labelStoreNum, memberlabel);
 
-            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal());
+            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal(cc.getTeacher(member_id)));
             HBox product = new HBox();
 
             Label prompt = new Label("Sale Complete!");
@@ -397,7 +397,7 @@ public class POS_UI extends Application implements Runnable {
                             tophb.setAlignment(Pos.TOP_LEFT);
                             tophb.getChildren().addAll(labelStoreNum, memberlabel);
 
-                            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal());
+                            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal(cc.getTeacher(member_id)));
                             HBox product = new HBox();
 
                             Button creditCard = new Button("Credit Card");
@@ -447,7 +447,7 @@ public class POS_UI extends Application implements Runnable {
                             tophb.setAlignment(Pos.TOP_LEFT);
                             tophb.getChildren().addAll(labelStoreNum, memberlabel);
 
-                            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal());
+                            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal(cc.getTeacher(member_id)));
                             HBox product = new HBox();
 
                             Label creditCardNo = new Label("Card Number: ");
@@ -504,7 +504,7 @@ public class POS_UI extends Application implements Runnable {
                             tophb.setAlignment(Pos.TOP_LEFT);
                             tophb.getChildren().addAll(labelStoreNum, memberlabel);
 
-                            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal());
+                            Label cart = new Label(myCart.listProducts() + "\n Total: " + myCart.getTotal(cc.getTeacher(member_id)));
                             HBox product = new HBox();
 
                             Label cashAmount = new Label("Cash Amount: ");
@@ -520,7 +520,7 @@ public class POS_UI extends Application implements Runnable {
                             submit.setOnAction(new EventHandler<ActionEvent>() {
                                 @Override
                                 public void handle(ActionEvent event) {
-                                    float total = myCart.getTotal();
+                                    float total = myCart.getTotal(cc.getTeacher(member_id));
                                     if (total > Float.parseFloat(cashNum.getText())) {
                                         Label errorField = new Label("Please give more cash than the given total.");
                                         errorField.setStyle("-fx-text-fill: red; -fx-pref-height: 20px");

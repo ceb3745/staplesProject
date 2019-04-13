@@ -642,8 +642,8 @@ public class CustomerControl {
         if(searchTerm.length() != 0){
             searchTermNew = Character.toUpperCase(searchTerm.charAt(0)) + searchTerm.substring(1, searchTerm.length());
         }
-        String query = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
-                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+        String query = "with storeSalesProduct (product_name,UPC,quantity, storeID, price) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id, price from\n" +
                 "product natural join saleitem natural join sale)\n" +
                 "select UPC,Product_name, storeID,sum(quantity), price as total_quantity from storeSalesProduct " +
                 "where product_name like " + "\'%" + searchTermNew + "%\'" +
@@ -694,8 +694,8 @@ public class CustomerControl {
 
     public ArrayList<VBox> searchName(ArrayList<VBox> arr, String searchTerm){
         String searchTermNew = Character.toUpperCase(searchTerm.charAt(0)) + searchTerm.substring(1, searchTerm.length());
-        String previousQuery = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
-                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+        String previousQuery = "with storeSalesProduct (product_name,UPC,quantity, storeID, price) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id, price from\n" +
                 "product natural join saleitem natural join sale)\n" +
                 "select product_name as total_quantity from storeSalesProduct " +
                 "where product_name like " + "\'%" + searchTermNew + "%\'" +
@@ -747,8 +747,8 @@ public class CustomerControl {
 
     public ArrayList<VBox> searchDetails(ArrayList<VBox> arr, String searchTerm){
         String searchTermNew = Character.toUpperCase(searchTerm.charAt(0)) + searchTerm.substring(1, searchTerm.length());
-        String previousQuery = "with storeSalesProduct (product_name,UPC,quantity, storeID) as\n" +
-                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id from\n" +
+        String previousQuery = "with storeSalesProduct (product_name,UPC,quantity, storeID, price) as\n" +
+                "(select product_name,product.UPC, saleitem.sale_quantity, sale.store_id, price from\n" +
                 "product natural join saleitem natural join sale)\n" +
                 "select product_name as total_quantity from storeSalesProduct " +
                 "where product_name like " + "\'%" + searchTermNew + "%\'" +

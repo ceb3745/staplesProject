@@ -133,6 +133,28 @@ public class ClientControl {
 
     }
 
+    public boolean getTeacher(int member_id){
+        if(member_id == -1){
+            return false;
+        }
+        ResultSet rs = null;
+        String query = "select member_type from member where member_id = '"+ member_id +" ';";
+
+        sqlExecutor.executeQuery(query);
+        try {
+            rs = sqlExecutor.executeQuery(query);
+            rs.next();
+            if(rs.getString(1).equals("Teacher")){
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+
+
+    }
+
 
 
     //add sale_item to existing sale

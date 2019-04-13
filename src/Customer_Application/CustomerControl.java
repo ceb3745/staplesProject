@@ -24,62 +24,7 @@ public class CustomerControl {
     String sub_dept_name = "";
     int upper_price = -1;
     int lower_price = -1;
-    //COMPUTERS
-    //8, 16, or 24
-    int ram = -1;
-    //Windows 10, Windows 9, Windows 8, mac OSX
-    String os = "";
-    //AMD Ryzen 3, Intel i5, Intel i7, Intel i3, Intel UHD, Intel Pentium
-    String processor = "";
-    //1TB, 700GB, 650GB, 500GB, 450GB, 320GB
-    String hhd = "";
 
-    //LAPTOPS
-    //14", 15.6", 17.3"
-    String screen_size = "";
-    //Yes, No
-    String touchscreen = "";
-    //LCD, LED backlight
-    String display_type = "";
-    //Stereo Speakers, Integrated High Definition Audio
-    String audio = "";
-
-    //DESKTOPS
-    float height_desktop = -1;
-    float width_desktop = -1;
-    float depth_desktop = -1;
-    //0, 1
-    int opticalDrive = -1;
-
-    //FURNITURE
-    float height = -1;
-    float width = -1;
-    float depth = -1;
-    //0, 1
-    int requiresAssembly = -1;
-    //Fuscia, Mauv, Goldenrod, Purple, Turquoise, Aquamarine, Maroon, Blue, Khaki, Crimson, Green, Yellow, Orange
-    //Violet, Pink, Puce, Indigo, Teal, Red
-    String colorFamily = "";
-
-    //INK TONER
-    //Magenta, CMY, Black, Cyan, CMY+B, Yellow
-    String color = "";
-    //Toner, Ink
-    String supplyType = "";
-    //XL, Med, Large, Small
-    String packSize = "";
-    //Standard, High
-    String yieldType = "";
-
-    //PAPER
-    //8.5X11, 8.5X11.7, 8X11, 8.5X10.5, 9X11.7, 9X11, 9X10.5
-    String sheetDimension = "";
-    //60, 16, 20, 32, 28, 50
-    String paperWeight = "";
-    //96 White, Bright Variety, 92 White, 98 White,
-    String paperColor = "";
-    //50, 100, 150
-    int packQuantity = -1;
 
     //heightF, widthF, depthF, raVB, cfVB
     public ArrayList<VBox> furnitureSearch(String height, String width, String depth, String ra, String cf){
@@ -474,7 +419,7 @@ public class CustomerControl {
         boolean typeOfPrinterB = (!sheetDimension.equals(""));
         boolean wirelessReadyB = (!paperWeight.equals(""));
         boolean printTechnologyB = (!paperColor.equals(""));
-        boolean mobileCapabilityB = (!packSize.equals(""));
+        boolean mobileCapabilityB = (!packQuantity.equals(""));
         if(typeOfPrinterB || wirelessReadyB || printTechnologyB || mobileCapabilityB){
             sb.append(" where ");
             if(!sheetDimension.equals("")){
@@ -488,9 +433,9 @@ public class CustomerControl {
                 if(wirelessReadyB || typeOfPrinterB){sb.append(" AND ");}
                 sb.append("paper_color='" + paperColor + "' ");
             }
-            if(!packSize.equals("")){
+            if(!packQuantity.equals("")){
                 if(printTechnologyB || typeOfPrinterB || wirelessReadyB){sb.append(" AND ");}
-                sb.append("pack_quantity='" + packSize + "' ");
+                sb.append("pack_quantity='" + packQuantity + "' ");
             }
         }
         sb.append(";");

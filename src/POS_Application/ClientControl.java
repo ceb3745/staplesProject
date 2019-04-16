@@ -207,7 +207,7 @@ public class ClientControl {
     }
 
     public boolean confirmProduct(String upc){
-        String query = "select * from product where upc=" + upc + ";";
+        String query = "select * from product where upc=" + upc + " AND store_id ='" + store_id +"';";
         ResultSet rs;
         try{
             rs = sqlExecutor.executeQuery(query);
